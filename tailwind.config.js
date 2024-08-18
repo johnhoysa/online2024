@@ -30,7 +30,7 @@ export default {
         }],
 
         '5xl': ['40px', {
-          lineHeight: '46px',
+          lineHeight: '40px',
           letterSpacing: '-0.2px',
           fontWeight: '600',
         }],
