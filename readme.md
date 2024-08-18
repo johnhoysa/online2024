@@ -5,7 +5,7 @@ Fix type issues
 move onto mobile views
 
 Tailwind build command for now: 
-npx tailwindcss -i ./src/input.css -o ./dist/css/output.css --watch
+npx tailwindcss -i ./src/css/input.css -o ./dist/css/output.css --watch
 
 ~~
 
