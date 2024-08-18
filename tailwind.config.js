@@ -7,6 +7,7 @@ export default {
     extend: {
       backgroundImage: {
         'hero': "url('../src/images/backgrounds/wood.png')",
+        'footer-trees': "url('../src/images/backgrounds/trees.png')",
       },
       colors: {
         'dirt':'#23201A',
