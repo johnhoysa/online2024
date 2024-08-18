@@ -1,6 +1,12 @@
+To do:
+Figure out path for bg images
+Fix spacing 
+Fix type issues
+move onto mobile views
+
 Tailwind build command for now: 
-npx tailwindcss -i ./src/input.css -o ./src/css/output.css --watch
-npm i concurrently
+npx tailwindcss -i ./src/input.css -o ./dist/css/output.css --watch
+
 ~~
 
 Vite has been added to site:
