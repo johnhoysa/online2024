@@ -6,8 +6,8 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        'hero': "url('../src/images/backgrounds/wood.png')",
-        'footer-trees': "url('../src/images/backgrounds/trees.png')",
+        'hero': "url('../../images/backgrounds/wood.png')",
+        'footer-trees': "url('../../images/backgrounds/trees.png')",
       },
       colors: {
         'dirt':'#23201A',
