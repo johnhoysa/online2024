@@ -4,7 +4,7 @@
   "version": "5.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "concurrently \"vite\" \"npx tailwindcss -i ./src/input.css -o ./src/css/output.css --watch\"",
     "build": "vite build",
     "preview": "vite preview"
   },
@@ -29,5 +29,8 @@
   "bugs": {
     "url": ""
   },
-  "homepage": "https://github.com/johnhoysa/somethinghere#readme"
+  "homepage": "https://github.com/johnhoysa/somethinghere#readme",
+  "dependencies": {
+    "concurrently": "^8.2.2"
+  }
 }
