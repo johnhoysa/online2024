@@ -1,7 +1,7 @@
 Tailwind build command for now: 
-npx tailwindcss -i ./src/input.css -o ./src/output.css --watch
-
-Once I get a JS build going I will need to create a distribute folder and will then update the output path.
+npx tailwindcss -i ./src/input.css -o ./src/css/output.css --watch
+npm i concurrently
+~~
 
 Vite has been added to site:
 "npm run dev": "vite", // start dev server, aliases: `vite dev`, `vite serve`

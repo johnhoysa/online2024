@@ -2,6 +2,13 @@ import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';
 import { ViteFaviconsPlugin } from 'vite-plugin-favicon2';
 import ViteRestart from 'vite-plugin-restart';
 import copy from 'rollup-plugin-copy';
+import { fileURLToPath } from "node:url";
+
+const filesNeedToExclude = ["./src/input.css"];
+
+const filesPathToExclude = filesNeedToExclude.map((src) => {
+    return fileURLToPath(new URL(src, import.meta.url));
+  });
 
 export default ({ command }) => ({
     base: command === 'serve' ? '' : '/dist/',
@@ -18,7 +25,7 @@ export default ({ command }) => ({
             },
             output: {
                 dir: 'dist/',
-            }
+            },
         },
     },
     server: {
