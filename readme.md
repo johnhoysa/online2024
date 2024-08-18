@@ -1,8 +1,13 @@
 To do:
-Figure out path for bg images
-Fix spacing 
-Fix type issues
+Fix type and spacing issues
 move onto mobile views
+Make sure build is working as I want it to
+Add real content
+launch site while development continues
+Include CraftCMS
+Build site within CraftCMS
+
+~~
 
 Tailwind build command for now: 
 npx tailwindcss -i ./src/css/input.css -o ./dist/css/output.css --watch
