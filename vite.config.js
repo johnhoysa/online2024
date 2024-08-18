@@ -1,5 +1,6 @@
 import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';
 import { ViteFaviconsPlugin } from 'vite-plugin-favicon2';
+import { defineConfig } from 'vite';
 import ViteRestart from 'vite-plugin-restart';
 import copy from 'rollup-plugin-copy';
 import { fileURLToPath } from "node:url";
@@ -13,6 +14,13 @@ const filesPathToExclude = filesNeedToExclude.map((src) => {
 export default ({ command }) => ({
     base: command === 'serve' ? '' : '/dist/',
     publicDir: 'src/',
+    css: {
+        preprocessorOptions: {
+          scss: {
+            additionalData: `$injectedColor: orange;`
+          }
+        }
+      },
     build: {
         outDir: 'dist/',
         emptyOutDir: true,
@@ -21,9 +29,12 @@ export default ({ command }) => ({
         minify: 'esbuild',
         rollupOptions: {
             input: {
-                index: './src/index.js',
+                index: './src/main.js',
             },
             output: {
+                manualChunks: false,
+            inlineDynamicImports: true,
+            entryFileNames: 'main.js', 
                 dir: 'dist/',
             },
         },
