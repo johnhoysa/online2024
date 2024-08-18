@@ -27,5 +27,5 @@ package-lock.json
 *.sw?
 
 # Project Files
-
+dist
 output.css
