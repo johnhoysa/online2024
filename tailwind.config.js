@@ -22,27 +22,26 @@ export default {
         'primary': ['Clarika Grotesque','Helvetica', 'Arial', 'sans-serif'],
       },
       fontSize: {
-
         '4xl': ['24px', {
-          lineHeight: '27.6px',
+          lineHeight: '28px',
           letterSpacing: '-0.1px',
           fontWeight: '600',
         }],
 
         '5xl': ['40px', {
           lineHeight: '40px',
-          letterSpacing: '-0.2px',
+          letterSpacing: '-0.1px',
           fontWeight: '600',
         }],
 
         '7xl': ['70px', {
-        lineHeight: '78.4px',
-        letterSpacing: '-0.2px',
+        lineHeight: '78px',
+        letterSpacing: '-0.1px',
         fontWeight: '500',
       }],
       },
       height: {
-        '860': '860px',
+        'hero-height': '860px',
       },
       maxWidth: {
         'md': '1280px',
