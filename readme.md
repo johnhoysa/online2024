@@ -1,15 +1,19 @@
-To do:
-Fix type and spacing issues
-move onto mobile views
+Build to do:
 Make sure build is working as I want it to
-Add real content
-launch site while development continues
-Include CraftCMS
-Build site within CraftCMS
+- move images out of src
+- make sure only files I want are moved.
+
+Site to do:
+- Fix type and spacing issues desktop
+- Fix other views
+
+Content to do:
+- continue to create content
 
 ~~
+Tailwind is now compiled with PostCSS
 
-Tailwind build command for now: 
+OLD: Tailwind build command for now: 
 npx tailwindcss -i ./src/css/input.css -o ./dist/css/output.css --watch
 
 ~~
