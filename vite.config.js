@@ -1,25 +1,11 @@
-import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';
-import { ViteFaviconsPlugin } from 'vite-plugin-favicon2';
-import { defineConfig } from 'vite';
 import ViteRestart from 'vite-plugin-restart';
 import copy from 'rollup-plugin-copy';
-import { fileURLToPath } from "node:url";
-
-const filesNeedToExclude = ["./src/input.css"];
-
-const filesPathToExclude = filesNeedToExclude.map((src) => {
-    return fileURLToPath(new URL(src, import.meta.url));
-  });
 
 export default ({ command }) => ({
     base: command === 'serve' ? '' : '/dist/',
     publicDir: 'src/',
     css: {
-        preprocessorOptions: {
-          scss: {
-            additionalData: `$injectedColor: orange;`
-          }
-        }
+        
       },
     build: {
         outDir: 'dist/',
@@ -32,11 +18,19 @@ export default ({ command }) => ({
                 index: './src/main.js',
             },
             output: {
-                manualChunks: false,
-            inlineDynamicImports: true,
-            entryFileNames: 'main.js', 
-                dir: 'dist/',
-            },
+                // Customize the output directory structure
+                assetFileNames: (assetInfo) => {
+                  if (assetInfo.name.endsWith('.css')) {
+                    return 'css/styles[extname]';
+                  }
+                  if (assetInfo.name.endsWith('.js')) {
+                    return 'js/scripts[extname]';
+                  }
+                  return '[name][extname]';
+                },
+                chunkFileNames: 'js/[name].js',
+                entryFileNames: 'js/[name].js',
+              },
         },
     },
     server: {
@@ -51,7 +45,7 @@ export default ({ command }) => ({
     plugins: [
         ViteRestart({
             reload: [
-                'templates/*'
+                'templates/**/*'
             ]
         }),
         copy({

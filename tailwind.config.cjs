@@ -51,5 +51,5 @@ export default {
   },
   plugins: [require('@tailwindcss/aspect-ratio')],
   safelist: [],
-  content: ['./templates/*.{twig,html,js}', './src/**/*.{css,js}'],
+  content: ['./templates/*.{twig,html,js}', './src/**/*.{css,js,html}'],
 };
