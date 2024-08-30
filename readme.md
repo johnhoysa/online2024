@@ -1,6 +1,5 @@
 Build to do:
 Make sure build is working as I want it to
-- npm run dev also needs to run a watch command
 - move images out of src
 - make sure only files I want are moved.
 - move template/index into dist
