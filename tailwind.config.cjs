@@ -40,9 +40,6 @@ export default {
         fontWeight: '500',
       }],
       },
-      height: {
-        'hero-height': '860px',
-      },
       maxWidth: {
         'md': '1280px',
         'lg': '1440px',
