@@ -1,6 +1,8 @@
 Build to do:
 Make sure build is working as I want it to
 - move template/index into dist
+- make sure only build files are moved, currently all files are moved
+- update docs to be user friendly
 
 Site to do:
 - Fix type and spacing issues desktop
@@ -10,12 +12,16 @@ Content to do:
 - continue to create content
 
 ~~
-Tailwind is now compiled with PostCSS
-Current: npm run build
-A to do item is to add a watch command 
 
-OLD: Tailwind build command for now: 
-npx tailwindcss -i ./src/css/input.css -o ./dist/css/output.css --watch
+Steps to start localhost and build:
+npm i
+npm run dev
+npm run build
+
+
+~~
+
+Tailwind is now compiled with PostCSS
 
 ~~
 
