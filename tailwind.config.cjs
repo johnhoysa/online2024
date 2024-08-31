@@ -6,8 +6,8 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        'hero': "url('../../images/backgrounds/wood.png')",
-        'footer-trees': "url('../../images/backgrounds/trees.png')",
+        'hero': "url('../../assets/images/backgrounds/wood.png')",
+        'footer-trees': "url('../../assets/images/backgrounds/trees.png')",
       },
       colors: {
         'dirt':'#23201A',
@@ -68,5 +68,5 @@ export default {
   },
   plugins: [require('@tailwindcss/aspect-ratio')],
   safelist: [],
-  content: ['./templates/*.{twig,html,js}', './src/**/*.{css,js,html}'],
+  content: ['./templates/*.{twig,html,js}', 'index.html', './src/**/*.{css,js,html}'],
 };
