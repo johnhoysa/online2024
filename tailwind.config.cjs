@@ -6,7 +6,7 @@ export default {
   theme: {
     extend: {
       animation: {
-        'fade-in': 'fade-in 1s ease-out'
+        'fade-in': 'fade-in 1s ease-out',
     },
       backgroundImage: {
         'hero': "url('../../src/images/wood.png')",
@@ -71,8 +71,8 @@ export default {
             '100%': {
                 opacity: '1',
             },
-        }
-    },
+        },
+      },
       maxWidth: {
         'md': '1280px',
         'lg': '1440px',

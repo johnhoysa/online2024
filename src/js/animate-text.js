@@ -1,8 +1,8 @@
 console.log('my intersection observer file was imported');
 
 // Select all elements with the class "box"
-const fadeInPara = document.querySelectorAll('p');
-const fadeInHeading = document.querySelectorAll('h1');
+const fadeInText = document.querySelectorAll('h1,h2,h3,h4,h5,h6,p,ul');
+
 // Create an IntersectionObserver
 const startAnimations = new IntersectionObserver(
   (domElements) => {
@@ -10,20 +10,17 @@ const startAnimations = new IntersectionObserver(
       const element = domElement.target;
       if (domElement.isIntersecting) {
         // Element entered the viewport
-        element.classList.add('fade-in');
+        element.classList.add('animate-fade-in');
       } else {
         // Element entered the viewport
-        element.classList.remove('fade-in');
+        element.classList.remove('animate-fade-in');
       }
     });
   },
   { threshold: 0 }
 );
 
-// If paragraph is in viewport, add class fade-in
-// fadeInPara.forEach((element) => {
-//   startAnimations.observe(element);
-// });
-// fadeInHeading.forEach((element) => {
-//   startAnimations.observe(element);
-// });
+// If paragraph is in viewport, add class fadeInText
+fadeInText.forEach((element) => {
+  startAnimations.observe(element);
+});
