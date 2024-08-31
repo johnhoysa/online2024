@@ -2,13 +2,12 @@ import ViteRestart from 'vite-plugin-restart';
 import copy from 'rollup-plugin-copy';
 
 export default ({ command }) => ({
-    base: command === 'serve' ? '' : '/dist/',
     publicDir: 'src/',
     css: {
         
       },
     build: {
-        outDir: 'dist/',
+        outDir: './dist/',
         emptyOutDir: true,
         sourcemap: true,
         manifest: 'manifest.json',
@@ -45,15 +44,7 @@ export default ({ command }) => ({
     plugins: [
         ViteRestart({
             reload: [
-                'templates/**/*'
-            ]
-        }),
-        copy({
-            targets: [
-                { 
-                    src: 'src/**/*', 
-                    dest: 'dist'
-                }
+                'index.html'
             ]
         }),
     ]

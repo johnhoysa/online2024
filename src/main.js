@@ -2,5 +2,6 @@
 import "./css/main.css";
 
 // JS 2
-import "./js/stuff.js";
-import "./js/intersection-observer.js";
+import "./js/anchor-list.js";
+import "./js/animate-text.js";
+import "./js/lazy-load.js";

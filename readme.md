@@ -1,12 +1,15 @@
 Build to do:
 Make sure build is working as I want it to
-- move template/index into dist
 - make sure only build files are moved, currently all files are moved
+- build is not really working now that index is in root directory
+     Issue is that localhost does not pick up latest changes.
+     Build is being ran
 - update docs to be user friendly
 
 Site to do:
-- Fix type and spacing issues desktop
-- Fix other views
+- Fix type and spacing issues
+- Setup JS
+- image alt tags are needed
 
 Content to do:
 - continue to create content
