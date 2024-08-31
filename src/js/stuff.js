@@ -1,1 +1,1 @@
-console.log('index.js imported')
+console.log(' my was js imported')

@@ -33,8 +33,17 @@ export default {
           letterSpacing: '-0.1px',
           fontWeight: '600',
         }],
-
-        '7xl': ['70px', {
+        'hero-mobile': ['32px', {
+        lineHeight: '40px',
+        letterSpacing: '-0.1px',
+        fontWeight: '500',
+         }],
+        'hero-tablet': ['40px', {
+        lineHeight: '48px',
+        letterSpacing: '-0.1px',
+        fontWeight: '500',
+         }],
+        'hero-desktop': ['70px', {
         lineHeight: '78px',
         letterSpacing: '-0.1px',
         fontWeight: '500',
