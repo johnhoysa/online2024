@@ -5,6 +5,9 @@ const defaultTheme = require('tailwindcss/defaultTheme');
 export default {
   theme: {
     extend: {
+      animation: {
+        'fade-in': 'fade-in 1s ease-out'
+    },
       backgroundImage: {
         'hero': "url('../../src/images/wood.png')",
         'footer-trees': "url('../../assets/images/backgrounds/trees.png')",
@@ -60,6 +63,16 @@ export default {
         fontWeight: '500',
       }],
       },
+      keyframes: {
+        'fade-in': {
+            '0%': {
+                opacity: '0',
+            },
+            '100%': {
+                opacity: '1',
+            },
+        }
+    },
       maxWidth: {
         'md': '1280px',
         'lg': '1440px',
@@ -68,5 +81,5 @@ export default {
   },
   plugins: [require('@tailwindcss/aspect-ratio')],
   safelist: [],
-  content: ['./templates/*.{twig,html,js}', '*.html', './src/**/*.{css,js,html}'],
+  content: ['*.html', './src/**/*.{css,js,html,twig}'],
 };
