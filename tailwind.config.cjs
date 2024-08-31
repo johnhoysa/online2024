@@ -22,6 +22,17 @@ export default {
         'primary': ['Clarika Grotesque','Helvetica', 'Arial', 'sans-serif'],
       },
       fontSize: {
+        'sm': ['16px', {
+          lineHeight: '150%',
+          letterSpacing: '-0.1px',
+          fontWeight: '300',
+        }],
+        'base': ['18px', {
+          lineHeight: '150%',
+          letterSpacing: '-0.1px',
+          fontWeight: '300',
+        }],
+
         '4xl': ['24px', {
           lineHeight: '28px',
           letterSpacing: '-0.1px',
