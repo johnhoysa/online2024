@@ -8,10 +8,10 @@ export default {
       animation: {
         'fade-in': 'fade-in 1s ease-out',
     },
-      backgroundImage: {
-        'hero': "url('../../src/images/wood.png')",
-        'footer-trees': "url('../../assets/images/backgrounds/trees.png')",
-      },
+    backgroundImage: theme => ({
+        'hero': "url('../../../images/wood.png')",
+        'footer-trees': "url('../../../images/trees.png')",
+      }),
       colors: {
         'dirt':'#23201A',
         'dirt-400': '#292622',
