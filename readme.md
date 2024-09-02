@@ -1,15 +1,14 @@
 Build to do:
 Make sure build is working as I want it to
 - make sure only build files are moved, currently all files are moved
-- build is not really working now that index is in root directory
-     Issue is that localhost does not pick up latest changes.
-     Build is being ran
-- update docs to be user friendly
+- build is not picking up new CSS files on build. I have to rebuild for new files to be seen on local host.
+- update docs with step by step instructions.
 
 Site to do:
-- Fix type and spacing issues
-- Setup JS
+- Design mobile header
+- Set up hover style on scroll 
 - image alt tags are needed
+- icons need aria skip labels 
 
 Content to do:
 - continue to create content
@@ -32,5 +31,3 @@ Vite has been added to site:
 "npm run dev": "vite", // start dev server, aliases: `vite dev`, `vite serve`
 "npm run build": "vite build", // build for production
 "npm run preview": "vite preview" // locally preview production build
-
-currently index is located here: [/templates/index.html](http://localhost:3000/templates/index.html)
