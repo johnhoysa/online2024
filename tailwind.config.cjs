@@ -7,10 +7,11 @@ export default {
     extend: {
       animation: {
         'fade-in': 'fade-in 1s ease-out',
+        'fade-out-up': 'fade-out-up 0.6s ease-out'
     },
     backgroundImage: theme => ({
-        'hero': "url('../../../images/wood.png')",
-        'footer-trees': "url('../../../images/trees.png')",
+        'hero': "url('../../images/wood.png')",
+        'footer-trees': "url('../../images/trees.png')",
       }),
       colors: {
         'dirt':'#23201A',
@@ -70,6 +71,16 @@ export default {
             },
             '100%': {
                 opacity: '1',
+            },
+        },
+        'fade-out-up': {
+            '0%': {
+                opacity: '1',
+                transform: 'translateY(0)'
+            },
+            '100%': {
+                opacity: '0',
+                transform: 'translateY(-16px)'
             },
         },
       },

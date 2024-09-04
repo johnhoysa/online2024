@@ -1,6 +1,5 @@
 Build to do:
 Make sure build is working as I want it to
-- make sure only build files are moved, currently all files are moved
 - build is not picking up new CSS files on build. I have to rebuild for new files to be seen on local host.
 - update docs with step by step instructions.
 

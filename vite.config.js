@@ -2,10 +2,6 @@ import ViteRestart from 'vite-plugin-restart';
 import copy from 'rollup-plugin-copy';
 
 export default ({ command }) => ({
-    publicDir: 'src/',
-    css: {
-        
-      },
     build: {
         outDir: './dist/',
         emptyOutDir: true,
