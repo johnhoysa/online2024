@@ -9,8 +9,8 @@ export default {
         'fade-in': 'fade-in 1s ease-out',
     },
     backgroundImage: theme => ({
-        'hero': "url('../../../images/wood.png')",
-        'footer-trees': "url('../../../images/trees.png')",
+        'hero': "url('../images/wood.png')",
+        'footer-trees': "url('../images/trees.png')",
       }),
       colors: {
         'dirt':'#23201A',
