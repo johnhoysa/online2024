@@ -5,3 +5,4 @@ import "./css/main.css";
 import "./js/anchor-list.js";
 import "./js/animate-text.js";
 import "./js/lazy-load.js";
+import "./js/navigation.js";

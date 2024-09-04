@@ -1,0 +1,1 @@
+// when hero text intersects with menu do something
