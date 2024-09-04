@@ -1,5 +1,4 @@
 // Lazy load images
-console.log('Lazy load images');
 const lazyImages = document.querySelectorAll('.lazy-load');
 // Create an IntersectionObserver
 const lazyLoadImage = new IntersectionObserver(

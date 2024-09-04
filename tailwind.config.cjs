@@ -76,10 +76,11 @@ export default {
       maxWidth: {
         'md': '1280px',
         'lg': '1440px',
+        'xl': '1768px',
       }
     },
   },
   plugins: [require('@tailwindcss/aspect-ratio')],
   safelist: [],
-  content: ['*.html', './src/**/*.{css,js,html,twig}'],
+  content: ['*.html','index.html', './src/**/*.{css,js,html,twig}'],
 };
