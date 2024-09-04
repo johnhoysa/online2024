@@ -2,7 +2,6 @@ import ViteRestart from 'vite-plugin-restart';
 import copy from 'rollup-plugin-copy';
 
 export default ({ command }) => ({
-    publicDir: 'public',
     build: {
         outDir: './dist/',
         emptyOutDir: true,
