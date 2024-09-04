@@ -1,5 +1,3 @@
-console.log('my intersection observer file was imported');
-
 // Select all elements with the class "box"
 const fadeInText = document.querySelectorAll('h1,h2,h3,h4,h5,h6,p,ul');
 
