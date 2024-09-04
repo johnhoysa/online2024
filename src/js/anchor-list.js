@@ -3,7 +3,7 @@ document.querySelectorAll('nav a').forEach(anchor => {
       e.preventDefault();
       const scrollId = this.getAttribute('href').substring(1);
       const scrollElement = document.getElementById(scrollId);
-      const headerOffset = 108;
+      const headerOffset = 116;
       const scrollPosition = scrollElement.getBoundingClientRect().top;
       const offsetPosition = scrollPosition + window.pageYOffset - headerOffset;
 
