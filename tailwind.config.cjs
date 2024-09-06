@@ -23,7 +23,7 @@ export default {
       },
      
       fontFamily: {
-        'primary': ['Clarika Grotesque','Helvetica', 'Arial', 'sans-serif'],
+        'primary': ['Clarika Grotesque','serif'],
       },
       fontSize: {
         'sm': ['16px', {
