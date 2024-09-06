@@ -6,8 +6,7 @@ Make sure build is working as I want it to
 Site to do:
 - Design mobile header
 - Set up hover style on scroll 
-- image alt tags are needed
-- icons need aria skip labels 
+
 
 Content to do:
 - continue to create content
