@@ -11,16 +11,18 @@ Content to do:
 Steps to build and preview site:
 npm i
 npm run build
-Within VS Code install Live Server pliugin. 
+Within VS Code install Live Server plugin. 
 Open the index.html file with live server and away you go. 
-This is a work around till I get hot reloading working.
+The page is refreshed after a file is saved.
+
+JS, CSS and back ground images are moved to dist folder. 
+assets folder is for images and icons
+For production just drag the dist, asset, folder to the server as well as index.html
 
 ~~
 
 Vite has been added to site:
-"npm run dev": "vite", // start dev server, aliases: `vite dev`, `vite serve`
 "npm run build": "vite build", // build for production
-"npm run preview": "vite preview" // locally preview production build
 
 ~~
 
