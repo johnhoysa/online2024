@@ -1,6 +1,4 @@
 import ViteRestart from 'vite-plugin-restart';
-import react from '@vitejs/plugin-react'
-import copy from 'rollup-plugin-copy';
 
 export default ({ command }) => ({
     build: {
@@ -42,9 +40,6 @@ export default ({ command }) => ({
         strictPort: true
     },
     plugins: [
-      react({
-        include: "**/*.js",
-      }),
         ViteRestart({
             reload: [
                 'index.html'
