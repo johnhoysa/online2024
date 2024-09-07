@@ -1,8 +1,3 @@
-Build to do:
-Make sure build is working as I want it to
-- build is not picking up new CSS files on build. I have to rebuild for new files to be seen on local host.
-- update docs with step by step instructions.
-
 Site to do:
 - Design mobile header
 - Set up hover style on scroll 
@@ -13,19 +8,24 @@ Content to do:
 
 ~~
 
-Steps to start localhost and build:
+Steps to build and preview site:
 npm i
-npm run dev
 npm run build
+Within VS Code install Live Server plugin. 
+Open the index.html file with live server and away you go. 
+The page is refreshed after a file is saved.
 
-
-~~
-
-Tailwind is now compiled with PostCSS
+JS, CSS and back ground images are moved to dist folder. 
+assets folder is for images and icons
+For production just drag the dist, asset, folder to the server as well as index.html
 
 ~~
 
 Vite has been added to site:
-"npm run dev": "vite", // start dev server, aliases: `vite dev`, `vite serve`
 "npm run build": "vite build", // build for production
-"npm run preview": "vite preview" // locally preview production build
+
+~~
+
+Tailwind is now compiled with PostCSS and is built with the build command within Vite.
+
+~~

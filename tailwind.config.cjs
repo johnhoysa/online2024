@@ -10,8 +10,8 @@ export default {
         'fade-out-up': 'fade-out-up 0.6s ease-out'
     },
     backgroundImage: theme => ({
-        'hero': "url('../../images/wood.png')",
-        'footer-trees': "url('../../images/trees.png')",
+        'hero': "url('./../images/wood.png')",
+        'footer-trees': "url('./../images/trees.png')",
       }),
       colors: {
         'dirt':'#23201A',

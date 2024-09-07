@@ -1,5 +1,4 @@
 import ViteRestart from 'vite-plugin-restart';
-import copy from 'rollup-plugin-copy';
 
 export default ({ command }) => ({
     build: {
@@ -31,6 +30,9 @@ export default ({ command }) => ({
     server: {
         fs: {
           strict: false
+        },
+        watch: {
+          usePolling: true
         },
         host: '0.0.0.0',
         origin: 'http://localhost:3000',
