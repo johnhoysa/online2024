@@ -1,4 +1,5 @@
 import ViteRestart from 'vite-plugin-restart';
+import react from '@vitejs/plugin-react'
 import copy from 'rollup-plugin-copy';
 
 export default ({ command }) => ({
@@ -32,12 +33,18 @@ export default ({ command }) => ({
         fs: {
           strict: false
         },
+        watch: {
+          usePolling: true
+        },
         host: '0.0.0.0',
         origin: 'http://localhost:3000',
         port: 3000,
         strictPort: true
     },
     plugins: [
+      react({
+        include: "**/*.js",
+      }),
         ViteRestart({
             reload: [
                 'index.html'
