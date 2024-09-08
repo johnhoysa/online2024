@@ -8,8 +8,11 @@ export default {
       animation: {
         'fade-in': 'fade-in 1s ease-out',
         'fade-out-up': 'fade-out-up 0.6s ease-out'
-    },
-    backgroundImage: theme => ({
+      },
+      backdropBlur: {
+        xs: '2px',
+      },
+      backgroundImage: theme => ({
         'hero': "url('./../images/wood.png')",
         'footer-trees': "url('./../images/trees.png')",
       }),
