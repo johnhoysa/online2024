@@ -31,7 +31,7 @@ export default {
           letterSpacing: '-0.1px',
           fontWeight: '300',
         }],
-        'base': ['18px', {
+        'base': ['20px', {
           lineHeight: '150%',
           letterSpacing: '-0.1px',
           fontWeight: '300',

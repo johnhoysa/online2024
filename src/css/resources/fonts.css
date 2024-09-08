@@ -10,7 +10,7 @@
 @font-face {
   font-family: 'Clarika Grotesque';
   font-style: normal;
-  font-weight: Light;
+  font-weight: 300;
   font-display: swap;
   src: url('../../assets/fonts/clarika-grotesque/Clarika Grotesque Regular.ttf') format('truetype');
 }
@@ -18,7 +18,7 @@
 @font-face {
   font-family: 'Clarika Grotesque';
   font-style: normal;
-  font-weight: Light;
+  font-weight: 400;
   font-display: swap;
   src: url('../../assets/fonts/clarika-grotesque/Clarika Grotesque Medium.ttf') format('truetype');
 }
@@ -26,7 +26,7 @@
 @font-face {
   font-family: 'Clarika Grotesque';
   font-style: normal;
-  font-weight: Light;
+  font-weight: 500;
   font-display: swap;
   src: url('../../assets/fonts/clarika-grotesque/Clarika Grotesque DemiBold.ttf') format('truetype');
 }
