@@ -51,18 +51,18 @@ export default {
           letterSpacing: '-0.1px',
           fontWeight: '600',
         }],
-        'hero-mobile': ['32px', {
-        lineHeight: '40px',
+        'hero-mobile': ['24px', {
+        lineHeight: '120%',
         letterSpacing: '-0.1px',
         fontWeight: '500',
          }],
-        'hero-tablet': ['40px', {
-        lineHeight: '48px',
+        'hero-tablet': ['36px', {
+        lineHeight: '120%',
         letterSpacing: '-0.1px',
         fontWeight: '500',
          }],
-        'hero-desktop': ['70px', {
-        lineHeight: '78px',
+        'hero-desktop': ['46px', {
+        lineHeight: '120%',
         letterSpacing: '-0.1px',
         fontWeight: '500',
       }],

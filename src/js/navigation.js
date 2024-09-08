@@ -6,10 +6,11 @@ window.addEventListener('scroll', () => {
     const socialIcons = document.getElementById('socialIcons');
     
     if (rect.top <= -108) {
-        navigation.classList.add('backdrop-blur-xs');
-        navigation.classList.add('bg-dirt/90');
+        navigation.classList.add('backdrop-blur-xs', 'shadow-lg','bg-dirt/90');
         if (window.innerWidth < 767) {
           socialIcons.classList.add('hidden') // only if on mobile though
         }
     }
+    //
+    //
 });
