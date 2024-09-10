@@ -1,16 +1,16 @@
+function toggleHeaderClass() {
+  const nav = document.querySelector('nav');
+  const scrollPosition = window.scrollY;
+  let scrolledPosition = 108;
+  if (window.innerWidth < 767) {
+    scrolledPosition = 64;
+  }
 
-window.addEventListener('scroll', () => {
-    const element = document.querySelector('#hero');
-    const rect = element.getBoundingClientRect();
-    const navigation = document.getElementById('navigation');
-    const socialIcons = document.getElementById('socialIcons');
-    
-    if (rect.top <= -108) {
-        navigation.classList.add('backdrop-blur-xs', 'shadow-lg','bg-dirt/90');
-        if (window.innerWidth < 767) {
-          socialIcons.classList.add('hidden') // only if on mobile though
-        }
-    }
-    //
-    //
-});
+  if (scrollPosition > scrolledPosition) {
+     nav.classList.add('backdrop-blur-xs', 'shadow-lg','bg-dirt/90');
+  } else {
+     nav.classList.remove('backdrop-blur-xs', 'shadow-lg','bg-dirt/90');
+  }
+}
+// Listen for scroll events
+window.addEventListener('scroll', toggleHeaderClass);
