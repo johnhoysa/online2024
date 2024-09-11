@@ -47,7 +47,7 @@ const callback = (entries, observer) => {
 const observer = new IntersectionObserver(callback, {
   root: null,
   rootMargin: '0px',
-  threshold: 0
+  threshold: 0.3 // 30% or more of element must be in view
 });
 
 // Loop through the sections and observe each one by it's Id
