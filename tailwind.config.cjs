@@ -7,9 +7,11 @@ export default {
     extend: {
       animation: {
         'fade-in': 'fade-in 1s ease-out',
-        'fade-out-up': 'fade-out-up 0.6s ease-out'
-    },
-    backgroundImage: theme => ({
+      },
+      backdropBlur: {
+        xs: '2px',
+      },
+      backgroundImage: theme => ({
         'hero': "url('./../images/wood.png')",
         'footer-trees': "url('./../images/trees.png')",
       }),
@@ -31,13 +33,12 @@ export default {
           letterSpacing: '-0.1px',
           fontWeight: '300',
         }],
-        'base': ['18px', {
+        'base': ['20px', {
           lineHeight: '150%',
           letterSpacing: '-0.1px',
           fontWeight: '300',
         }],
-
-        '4xl': ['24px', {
+        '2xl': ['24px', {
           lineHeight: '28px',
           letterSpacing: '-0.1px',
           fontWeight: '600',
@@ -48,18 +49,18 @@ export default {
           letterSpacing: '-0.1px',
           fontWeight: '600',
         }],
-        'hero-mobile': ['32px', {
-        lineHeight: '40px',
+        'hero-mobile': ['40px', {
+        lineHeight: '120%',
         letterSpacing: '-0.1px',
         fontWeight: '500',
          }],
-        'hero-tablet': ['40px', {
-        lineHeight: '48px',
+        'hero-tablet': ['36px', {
+        lineHeight: '120%',
         letterSpacing: '-0.1px',
         fontWeight: '500',
          }],
-        'hero-desktop': ['70px', {
-        lineHeight: '78px',
+        'hero-desktop': ['46px', {
+        lineHeight: '120%',
         letterSpacing: '-0.1px',
         fontWeight: '500',
       }],
@@ -71,16 +72,6 @@ export default {
             },
             '100%': {
                 opacity: '1',
-            },
-        },
-        'fade-out-up': {
-            '0%': {
-                opacity: '1',
-                transform: 'translateY(0)'
-            },
-            '100%': {
-                opacity: '0',
-                transform: 'translateY(-16px)'
             },
         },
       },

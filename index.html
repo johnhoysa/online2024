@@ -21,7 +21,7 @@
 </head>
 
 
-<body class="static p-0 text-white font-primary bg-dirt">
+<body class="static p-0 text-white font-primary bg-dirt text-base">
 
   <nav id="navigation" class="sticky top-0  lg:px-16 px-8 py-4  md:-mt-16 -mt-[152px]">
     <div class="max-w-lg md:flex block justify-between mx-auto">
@@ -43,7 +43,7 @@
           <a class="hover:border-b hover:pb-1 border-pine-cone" href="#cv">CV</a>
         </li>
       </ul>
-      <ul id="socialIcons" class="gap-y-6 items-center h-5 pt-1 md:mt-0 mt-4 md:flex hidden">
+      <ul class="gap-y-6 items-center h-5 pt-1 md:mt-0 mt-4 md:flex hidden">
         <li>
           <a href="https://www.linkedin.com/in/johnhoysa">
             <img src="./assets/images/icons/linkedin.svg" alt="LinkedIn" width="18px" height="18px">
@@ -62,26 +62,19 @@
     </div>
   </nav>
 
-  <header id="hero" class="flex bg-top bg-repeat-x bg-cover bg-hero">
-    <div class="flex items-center max-w-xl md:pt-40 md:pb-40 pt-44 pb-24 lg:px-16 px-8 mx-auto">
+  <div id="hero" class="flex bg-top bg-repeat-x bg-cover bg-hero min-h-screen snap-start">
+    <header class="flex items-center max-w-xl md:pt-40 md:pb-40 pt-44 pb-24 lg:px-16 px-8 mx-auto">
       <h2 class="lg:text-hero-desktop md:text-hero-tablet text-hero-mobile font-primary text-primary">
-        I'm a seasoned
-        front-end developer
-        with a strong
-        background in
-        HTML,
-        CSS,
-        JavaScript,
-        and building web
-        experiences for both content management systems and e-commerce platforms.
+        Hello, I’m an experienced frontend developer specializing in JavaScript, CSS, components, style guides, and
+        CMSs
       </h2>
-    </div>
-  </header>
+      </head>
+  </div>
 
   <main>
-    <div class="container max-w-lg lg:px-16 px-8 mt-36 mx-auto">
-      <section id="skills" class="max-w-lg px-4 pb-4 bg-dirt-400 lg:pt-28 pt-14 rounded-2xl">
-        <h2 class="lg:pl-4 pl-2 text-5xl text-primary">Key Skills</h2>
+    <div id="skills" class="container max-w-lg lg:px-16 px-8 lg:mt-36 mt-28 mx-auto snap-start">
+      <section class="max-w-lg px-4 pb-4 bg-dirt-400 lg:pt-28 pt-14 rounded-2xl">
+        <h2 class="lg:pl-4 pl-2 lg:text-5xl md:text-4xl text-3xl text-primary">Key Skills</h2>
         <p class="lg:w-1/2 pt-4 pl-4">My background in development paired with a love for organization, and design make
           me a key player for any team.</p>
 
@@ -117,25 +110,25 @@
       </section>
     </div>
 
-    <div class="container max-w-lg lg:px-16 px-8 mt-36 mx-auto">
-      <section id="projects">
-        <h2 class="text-5xl text-primary">Projects</h2>
+    <div id="projects" class="container max-w-lg lg:px-16 px-8 lg: mt-36 mt-28 mx-auto snap-start">
+      <section>
+        <h2 class="lg:text-5xl md:text-4xl text-3xl text-primary">Projects</h2>
         <p class="lg:w-1/2 pt-4 text-xl">Here are some of my more favorite projects that I have had a chance to work on.
         </p>
-        <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6 lg:mt-8 mt-6">
+        <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6 mt-6">
           <div class="project-card mt-8">
             <img class="rounded-2xl aspect-[16/9] lazy-load" src="./assets/images/lazyload.jpg" alt="Expedia Group
               screenshot" data-image="./assets/images/project-images/expedia.jpg">
-            <h3 class="mt-8 text-4xl text-primary">Expedia</h3>
-            <p class="mt-2 leading-6 text-primary">HTML,CSS,JS, AEM</p>
+            <h3 class="mt-4 lg:text-3xl text-2xl text-primary">Expedia</h3>
+            <p class="mt-2 leading-6 text-primary text-sm">HTML,CSS,JS, AEM</p>
             <p class="mt-4 text-base">As a Frontend Developer working with Adobe Experience Manager (AEM), I’m charged
               with fixing and enhancing Expedia Groups Partner and Escapia marketing sites.</p>
           </div>
           <div class="project-card mt-8">
             <img class="rounded-2xl aspect-[16/9] lazy-load" src="./assets/images/lazyload.jpg"
               data-image="./assets/images/project-images/mrm.jpg" alt="MRM screenshot">
-            <h3 class="mt-8 text-4xl text-primary">British American Tabacoo</h3>
-            <p class="mt-2 leading-6 text-primary">HTML, CSS, JS, AEM, Magento</p>
+            <h3 class="mt-4 lg:text-3xl text-2xl text-primary">British American Tabacoo</h3>
+            <p class="mt-2 leading-6 text-primary text-sm">HTML, CSS, JS, AEM, Magento</p>
             <p class="mt-4">I utilized Adobe Experience Manager (AEM) and Magento’s GraphQL to create unique user
               experiences across various global markets.
             </p>
@@ -143,8 +136,8 @@
           <div class="project-card mt-8">
             <img class="rounded-2xl aspect-[16/9] lazy-load" src="./assets/images/lazyload.jpg"
               data-image="./assets/images/project-images/nescafe-dolce-gusto.jpg" alt="NesCafe Dolce Gusto screenshot">
-            <h3 class="mt-8 text-4xl text-primary">Nescafé Dolce Gusto</h3>
-            <p class="mt-2 leading-6 text-primary">HTML, CSS, JS, Magento</p>
+            <h3 class="mt-4 lg:text-3xl text-2xl text-primary">Nescafé Dolce Gusto</h3>
+            <p class="mt-2 leading-6 text-primary text-sm">HTML, CSS, JS, Magento</p>
             <p class="mt-4">As part of a team at MRM, I utilized Magento to develop websites for international markets.
               My responsibilities ranged from updating templates, fixing layout issues, to installing and styling
               plugins.</p>
@@ -152,8 +145,8 @@
           <div class="project-card mt-8">
             <img class="rounded-2xl aspect-[16/9] lazy-load" src="./assets/images/lazyload.jpg"
               data-image="./assets/images/project-images/macsales.jpg" alt="MacSales screenshot">
-            <h3 class="mt-8 text-4xl text-primary">MacSales</h3>
-            <p class="mt-2 leading-6 text-primary">HTML, CSS ,JS, Craft CMS</p>
+            <h3 class="mt-4 lg:text-3xl text-2xl text-primary">MacSales</h3>
+            <p class="mt-2 leading-6 text-primary text-sm">HTML, CSS ,JS, Craft CMS</p>
             <p class="mt-4">I was part of team that helped re-develope and place the e-commerce site into Craft CMS.
               Priorities were to ensure easy page creation as well as fast loading site.
             </p>
@@ -161,16 +154,16 @@
           <div class="project-card mt-8">
             <img class="rounded-2xl aspect-[16/9] lazy-load" src="./assets/images/lazyload.jpg"
               data-image="./assets/images/project-images/esc13.jpg" alt="ESC 13 screenshot">
-            <h3 class="mt-8 text-4xl text-primary">ESC 13</h3>
-            <p class="mt-2 leading-6 text-primary">HTML, CSS, JS, ExpressionEngine CMS</p>
+            <h3 class="mt-4 lg:text-3xl text-2xl text-primary">ESC 13</h3>
+            <p class="mt-2 leading-6 text-primary text-sm">HTML, CSS, JS, ExpressionEngine CMS</p>
             <p class="mt-4">I lead development and was responsible for scoping work, defining goals, providing technical
               insight for testing and deployment and adhering to brand guidelines and general client requirements.</p>
           </div>
           <div class="project-card mt-8">
             <img class="rounded-2xl aspect-[16/9] lazy-load" src="./assets/images/lazyload.jpg"
               data-image="./assets/images/project-images/parent-companion.jpg" alt="Parent Companion screenshot">
-            <h3 class="mt-8 text-4xl text-primary">The Parent Companion</h3>
-            <p class="mt-2 leading-6 text-primary">HTML,CSS, CMS</p>
+            <h3 class="mt-4 lg:text-3xl text-2xl text-primary">The Parent Companion</h3>
+            <p class="mt-2 leading-6 text-primary text-sm">HTML,CSS, CMS</p>
             <p class="mt-4">While at ESC 13, we collaborated with Theresa Neil, Strategy + Design, to design a site that
               I eventually developed and then integrated with a CMS.</p>
           </div>
@@ -178,13 +171,14 @@
       </section>
     </div>
 
-    <div id="about" class="mt-36 bg-bottom bg-repeat-x bg-contain bg-footer-trees">
+    <div id="about" class="mt-36 bg-bottom bg-repeat-x bg-contain bg-footer-trees snap-start">
       <section class="grid grid-cols-6 gap-6 pb-4 mx-auto px-8">
-        <div class="col-span-2 justify-self-end md:order-first order-last">
+        <div
+          class="md:col-span-2 col-span-3 md:justify-self-end justify-self-start md:order-first order-last lg:mt-0 mt-8">
           <img src="./assets/images/site/john-hoysa-about.png" width="180px" height="180px" alt="Image of John Hoysa">
         </div>
         <div class="md:col-span-3 col-span-6">
-          <h2 class="text-5xl text-primary">About</h2>
+          <h2 class="lg:text-5xl md:text-4xl text-3xl text-primary">About</h2>
           <p class="mt-4">I am a versatile front-end developer with a robust background in HTML, CSS, JavaScript, Adobe
             Experience Manager, Craft CMS, and E-Commerce development. I thrive on collaborating with product owners,
             stakeholders, and creatives to transform ideas into reality, deliver impactful results, and ensure
@@ -209,10 +203,9 @@
 
       <section class="lg:col-span-2 col-span-6">
         <h2 class="text-5xl text-primary">Ready to work together?</h2>
-        <p class="mt-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-          labore et dolore magna aliqua..</p>
+
         <a class="flex mt-8 group" href="mailto:johnhoysa@gmail.com?subject=Ready to work together!">
-          Call to action
+          Send me an email
           <img class="ml-2 fill-primary group-hover:animate-pulse" src="./assets/images/icons/arrow.svg" alt=""
             width="24px" height="24px" aria-hidden="true">
         </a>
@@ -221,20 +214,20 @@
       <section class="flex flex-col lg:col-span-4 col-span-6 lg:place-items-end mt-16 lg:items-end lg:justify-end">
         <img class="" src="./assets/images/site/john-hoysa-logo.svg" alt="Logo" width="152px" height="32px"
           alt="John Hoysa">
-        <ul class="flex gap-y-6 items-center h-5 pt-1 mt-4 md:hidden">
+        <ul class="flex gap-y-6 items-center h-5 pt-1 mt-6 mb-2 md:hidden">
           <li>
             <a href="https://www.linkedin.com/in/johnhoysa">
-              <img src="./assets/images/icons/linkedin.svg" alt="LinkedIn" width="18px" height="18px">
+              <img src="./assets/images/icons/linkedin.svg" alt="LinkedIn" width="24px" height="24px">
             </a>
           </li>
           <li class="px-6">
             <a href="https://github.com/johnhoysa/">
-              <img src="./assets/images/icons/github.svg" alt="GitHub" width="18px" height="18px">
+              <img src="./assets/images/icons/github.svg" alt="GitHub" width="24px" height="24px">
             </a>
           </li>
           <li>
             <a href="mailto:johnhoysa@gmail.com?subject=Correspondence From Site">
-              <img src="./assets/images/icons/email.svg" alt="Email" width="18px" height="18px"></a>
+              <img src="./assets/images/icons/email.svg" alt="Email" width="24px" height="24px"></a>
           </li>
         </ul>
         <p class="mt-4">© 2024 The <a href="https://www.jeffmcallister.com/">Design Standard LLC. | Jeff McAllister</a>.
