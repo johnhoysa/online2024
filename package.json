@@ -30,5 +30,7 @@
     "url": ""
   },
   "homepage": "https://github.com/johnhoysa/online2024",
-  "dependencies": {}
+  "dependencies": {
+    "prettier": "^3.3.3"
+  }
 }
