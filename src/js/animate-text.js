@@ -9,9 +9,6 @@ const startAnimations = new IntersectionObserver(
       if (domElement.isIntersecting) {
         // Element entered the viewport
         element.classList.add('animate-fade-in');
-      } else {
-        // Element entered the viewport
-        element.classList.remove('animate-fade-in');
       }
     });
   },

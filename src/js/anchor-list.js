@@ -20,7 +20,6 @@ const links = document.querySelectorAll('nav div ul li a');
 
 //get sections
 const sections = document.querySelectorAll('div[id]');
-console.log('sections', sections);
 // Extract the id values into an array this is used to observe the elements
 // These ids should match the href value of the anchor links
 const ids = Array.from(sections).map((section) => section.id);

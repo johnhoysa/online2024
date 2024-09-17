@@ -49,17 +49,22 @@ export default {
           letterSpacing: '-0.1px',
           fontWeight: '600',
         }],
-        'hero-mobile': ['40px', {
+        'hero-mobile': ['36px', {
         lineHeight: '120%',
         letterSpacing: '-0.1px',
         fontWeight: '500',
          }],
-        'hero-tablet': ['36px', {
+        'hero-tablet': ['38px', {
         lineHeight: '120%',
         letterSpacing: '-0.1px',
         fontWeight: '500',
          }],
-        'hero-desktop': ['46px', {
+        'hero-desktop': ['48px', {
+        lineHeight: '120%',
+        letterSpacing: '-0.1px',
+        fontWeight: '500',
+      }],
+      'hero-desktop-xl': ['60px', {
         lineHeight: '120%',
         letterSpacing: '-0.1px',
         fontWeight: '500',
