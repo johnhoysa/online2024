@@ -1,4 +1,4 @@
-document.querySelectorAll('nav a').forEach((anchor) => {
+document.querySelectorAll('nav .anchor-list a').forEach((anchor) => {
   anchor.addEventListener('click', function (e) {
     e.preventDefault();
     const scrollId = this.getAttribute('href').substring(1);
