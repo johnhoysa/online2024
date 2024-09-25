@@ -49,7 +49,7 @@ export default {
           letterSpacing: '-0.1px',
           fontWeight: '600',
         }],
-        'hero-mobile': ['36px', {
+        'hero-mobile': ['24px', {
         lineHeight: '120%',
         letterSpacing: '-0.1px',
         fontWeight: '500',
