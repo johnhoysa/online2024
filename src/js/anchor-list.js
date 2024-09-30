@@ -32,11 +32,7 @@ const callback = (entries, observer) => {
       links.forEach((link) => {
         link.classList.remove('border-b', 'pb-1');
       });
-      // add class to the current link
-      console.log(
-        'what is this?',
-        `nav ul.anchor-list li:a[href="#${entry.target.id}"]`
-      );
+      // add class to the current link if it exists
       if (
         document.querySelector(
           `nav ul.anchor-list li a[href="#${entry.target.id}"]`
