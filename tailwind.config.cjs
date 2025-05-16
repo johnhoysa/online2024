@@ -13,6 +13,7 @@ export default {
       },
       backgroundImage: (theme) => ({
         hero: "url('./../images/wood.png')",
+        'hero-mobile': "url('./../images/wood-mobile.png')",
         'footer-trees': "url('./../images/trees.png')"
       }),
       colors: {
