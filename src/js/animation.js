@@ -6,37 +6,32 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 ///
-const navItems = document.querySelectorAll('ul#navigationItems li');
 
-const navSpans = document.querySelectorAll('ul#navigationItems li span');
+document.addEventListener('DOMContentLoaded', () => {
+  const navItems = document.querySelectorAll('#navItems li');
 
-let clicked = false;
+  navItems.forEach((item) => {
+    const underline = item.querySelector('div');
 
-// Create GSAP tween targeting the CSS variable
-const afterTween = gsap.to(btnSpan, {
-  y: 8,
-  duration: 1,
-  ease: 'power2.out',
-  opacity: 1,
-  autoAlpha: 1,
-  paused: true
+    // Create a timeline paused by default
+    const tl = gsap.timeline({ paused: true });
+    tl.to(underline, {
+      y: 12,
+      opacity: 1,
+      autoAlpha: 1,
+      duration: 0.5,
+      ease: 'power2.out'
+    });
+
+    item.addEventListener('mouseenter', () => {
+      tl.play();
+    });
+
+    item.addEventListener('mouseleave', () => {
+      tl.reverse();
+    });
+    item.addEventListener('click', () => {
+      tl.play();
+    });
+  });
 });
-
-btn.addEventListener('mouseenter', () => {
-  if (!clicked) {
-    afterTween.play();
-  }
-});
-
-btn.addEventListener('mouseleave', () => {
-  if (!clicked) {
-    afterTween.reverse();
-  }
-});
-
-btn.addEventListener('click', () => {
-  clicked = true;
-  afterTween.play(); // ensure it's fully shown
-});
-
-//
