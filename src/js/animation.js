@@ -25,6 +25,31 @@ gsap.from(header, {
   duration: 1
 });
 
+// Animate headings for each section
+const animateHeadings = document.querySelectorAll('.animate-heading');
+animateHeadings.forEach((heading) => {
+  const animateHeading = heading.querySelector('h2');
+  const animateDesc = heading.querySelector('p');
+  gsap.from(animateHeading, {
+    scrollTrigger: {
+      trigger: heading
+    },
+    x: -24,
+    opacity: 0,
+    autoAlpha: 0,
+    duration: 1
+  });
+  gsap.from(animateDesc, {
+    scrollTrigger: {
+      trigger: heading
+    },
+    x: 24,
+    opacity: 0,
+    autoAlpha: 0,
+    duration: 1
+  });
+});
+
 // Projects Scroll Triggers
 const projectContainer = document.getElementById('projects');
 // console.log(projectContainer);
