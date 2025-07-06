@@ -2,10 +2,10 @@
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-// Intialize plugins
+// Register plugins here
 gsap.registerPlugin(ScrollTrigger);
 
-///
+// Nav Items
 
 document.addEventListener('DOMContentLoaded', () => {
   const navItems = document.querySelectorAll('#navItems li');
@@ -20,7 +20,36 @@ document.addEventListener('DOMContentLoaded', () => {
       opacity: 1,
       autoAlpha: 1,
       duration: 0.5,
-      ease: 'power2.out'
+      ease: 'ease.inOut'
+    });
+
+    item.addEventListener('mouseenter', () => {
+      tl.play();
+    });
+
+    item.addEventListener('mouseleave', () => {
+      tl.reverse();
+    });
+    item.addEventListener('click', () => {
+      tl.play();
+    });
+  });
+});
+
+// Social Items
+
+document.addEventListener('DOMContentLoaded', () => {
+  const navSocialItems = document.querySelectorAll('#navSocial li');
+
+  navSocialItems.forEach((item) => {
+    const circleBG = item;
+
+    // Create a timeline paused by default
+    const tl = gsap.timeline({ paused: true });
+    tl.to(circleBG, {
+      background: '#EE684A',
+      duration: 0.5,
+      ease: 'ease.inOut'
     });
 
     item.addEventListener('mouseenter', () => {
