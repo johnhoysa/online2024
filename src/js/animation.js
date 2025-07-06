@@ -5,6 +5,26 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 // Register plugins here
 gsap.registerPlugin(ScrollTrigger);
 
+// On load animations
+const navigation = document.getElementById('navigation');
+const header = document.getElementsByTagName('header');
+
+// Navigation
+gsap.from(navigation, {
+  y: 32,
+  opacity: 1,
+  autoAlpha: 1,
+  duration: 1
+});
+
+gsap.from(header, {
+  y: 32,
+  opacity: 1,
+  autoAlpha: 0,
+  duration: 1
+});
+
+//
 // Nav Items Hover
 document.addEventListener('DOMContentLoaded', () => {
   const navItems = document.querySelectorAll('#navItems li');
