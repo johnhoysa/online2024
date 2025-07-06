@@ -9,12 +9,10 @@ const lazyLoadImage = new IntersectionObserver(
       // check if image is in viewport and if it has already been loaded
       if (image.isIntersecting && element.classList.contains('lazy-load')) {
         // Element entered the viewport
-        element.classList.add('lazy-loaded', 'animate-fade-in', 'opacity-100');
-        element.classList.remove('lazy-load', 'opacity-0');
+        element.classList.add('lazy-loaded');
+        element.classList.remove('lazy-load');
         // load image
         element.src = imagePath;
-      } else {
-        // do nothing since image is loaded now
       }
     });
   },
