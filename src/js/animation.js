@@ -11,18 +11,48 @@ const header = document.getElementsByTagName('header');
 
 // Navigation
 gsap.from(navigation, {
-  y: 32,
-  opacity: 1,
+  opacity: 0,
   autoAlpha: 0,
-  duration: 1
+  duration: 1,
+  delay: 0.25,
+  ease: 'ease.out'
 });
 
 // Header
 gsap.from(header, {
-  y: 32,
-  opacity: 1,
+  y: 24,
+  opacity: 0,
   autoAlpha: 0,
-  duration: 1
+  ease: 'ease.out',
+  duration: 1,
+  delay: 0.5
+});
+
+// Animate Skill subheading and icon
+const animateIconHeadings = document.querySelectorAll('.animate-icon-heading');
+animateIconHeadings.forEach((heading) => {
+  const animateIcon = heading.querySelector('object');
+  const animateHeading = heading.querySelector('h3');
+
+  gsap.from(animateIcon, {
+    scrollTrigger: {
+      trigger: animateIconHeadings
+    },
+    x: -24,
+    opacity: 0,
+    autoAlpha: 0,
+    duration: 1
+  });
+
+  gsap.from(animateHeading, {
+    scrollTrigger: {
+      trigger: animateIconHeadings
+    },
+    x: 24,
+    opacity: 0,
+    autoAlpha: 0,
+    duration: 1
+  });
 });
 
 // Animate headings for each section
@@ -52,21 +82,7 @@ animateHeadings.forEach((heading) => {
 
 // Projects Scroll Triggers
 const projectContainer = document.getElementById('projects');
-// console.log(projectContainer);
-// animate section in, might remove this
-// gsap.from(projectContainer, {
-//   scrollTrigger: {
-//     trigger: projectContainer
-//   },
-//   y: 32,
-//   opacity: 1,
-//   autoAlpha: 0,
-//   duration: 1
-// });
-
-// animate each project card image and content
 const projectCards = projectContainer.querySelectorAll('.project-card');
-// console.log(projectCards);
 
 projectCards.forEach((card) => {
   gsap.from(card, {
