@@ -9,9 +9,8 @@ const lazyLoadImage = new IntersectionObserver(
       // check if image is in viewport and if it has already been loaded
       if (image.isIntersecting && element.classList.contains('lazy-load')) {
         // Element entered the viewport
-        element.classList.add('lazy-loaded');
-        element.classList.add('animate-fade-in');
-        element.classList.remove('lazy-load');
+        element.classList.add('lazy-loaded', 'animate-fade-in', 'opacity-100');
+        element.classList.remove('lazy-load', 'opacity-0');
         // load image
         element.src = imagePath;
       } else {

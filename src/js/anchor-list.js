@@ -1,5 +1,5 @@
 // Get all anchor links
-const links = document.querySelectorAll('nav div ul.anchor-list li a');
+const links = document.querySelectorAll('nav ul.anchor-list li a');
 //get divs with IDs
 const sections = document.querySelectorAll('div[id]');
 
@@ -21,7 +21,7 @@ links.forEach((anchor) => {
 });
 
 // Highlight active anchor link based on the section in view
-// Extract the id values into an array this is used to observe the elements
+// Extract the id values into an array
 const ids = Array.from(sections).map((section) => section.id);
 
 // Callback function to handle intersection changes
@@ -32,11 +32,17 @@ const callback = (entries, observer) => {
       links.forEach((link) => {
         link.classList.remove('border-b', 'pb-1');
       });
-      // add class to the current link
-      document
-        .querySelector(`nav ul li a[href="#${entry.target.id}"]`)
-        .classList.add('border-b', 'pb-1');
-      // no need for an else statement as the class is removed from all links
+      // add class to the current link if it exists
+      if (
+        document.querySelector(
+          `nav ul.anchor-list li a[href="#${entry.target.id}"]`
+        )
+      ) {
+        document
+          .querySelector(`nav ul.anchor-list li a[href="#${entry.target.id}"]`)
+          .classList.add('border-b', 'pb-1');
+        // no need for an else statement as the class is removed from all links
+      }
     }
   });
 };
