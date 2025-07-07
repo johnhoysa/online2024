@@ -40,7 +40,7 @@ animateHeadings.forEach((heading) => {
     y: 24,
     opacity: 0,
     autoAlpha: 0,
-    duration: 0.75,
+    duration: 1,
     ease: 'ease.out'
   });
   gsap.from(animateDesc, {
@@ -50,7 +50,7 @@ animateHeadings.forEach((heading) => {
     y: 24,
     opacity: 0,
     autoAlpha: 0,
-    duration: 0.75,
+    duration: 1,
     ease: 'ease.out'
   });
 });
@@ -95,6 +95,21 @@ const animateAbout = document.getElementById('about');
 gsap.from(animateAbout, {
   scrollTrigger: {
     trigger: animateAbout
+  },
+  y: 24,
+  opacity: 0,
+  autoAlpha: 0,
+  duration: 1,
+  delay: 0.5,
+  ease: 'ease.out'
+});
+
+// Footer
+const animateFooter = document.querySelector('footer');
+
+gsap.from(animateFooter, {
+  scrollTrigger: {
+    trigger: animateFooter
   },
   y: 24,
   opacity: 0,
