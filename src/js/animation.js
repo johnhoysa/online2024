@@ -53,17 +53,12 @@ animateHeadings.forEach((heading) => {
   });
 });
 
-// Animate Skills
+// Animate each skill listed
 const animateSkills = document.querySelectorAll('.animate-skill');
 animateSkills.forEach((heading) => {
-  const animateIcon = heading.querySelector('object');
-  const animateHeading = heading.querySelector('h3');
-  const animatePara = heading.querySelector('p');
-
-  // Icons
   gsap.from(heading, {
     scrollTrigger: {
-      trigger: animateSkills
+      trigger: heading
     },
     y: 24,
     opacity: 0,
@@ -82,10 +77,10 @@ projectCards.forEach((card) => {
     scrollTrigger: {
       trigger: card
     },
-    y: 32,
+    y: 24,
     opacity: 0,
     autoAlpha: 0,
-    duration: 2
+    duration: 1
   });
 });
 
