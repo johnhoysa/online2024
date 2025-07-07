@@ -5,118 +5,91 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 // Register plugins here
 gsap.registerPlugin(ScrollTrigger);
 
-// On load animations
+// Elements to animate or tween
 const navigation = document.getElementById('navigation');
 const header = document.getElementsByTagName('header');
+const animateHeadings = document.querySelectorAll('.animate-heading');
+const animateSkills = document.querySelectorAll('.animate-skill');
+const projectContainer = document.getElementById('projects');
+const projectCards = projectContainer.querySelectorAll('.project-card');
+const animateAbout = document.getElementById('about');
+const animateFooter = document.querySelector('footer');
+
+// set defaults for tweens below
+gsap.defaults({
+  ease: 'ease.out',
+  duration: 1,
+  opacity: 0,
+  autoAlpha: 0
+});
 
 // Navigation
 gsap.from(navigation, {
-  opacity: 0,
-  autoAlpha: 0,
-  duration: 1,
-  delay: 0.5,
-  ease: 'ease.out'
+  delay: 0.5
 });
 
 // Header
 gsap.from(header, {
   y: 24,
-  opacity: 0,
-  autoAlpha: 0,
-  ease: 'ease.out',
-  duration: 1,
   delay: 0.75
 });
 
-// Animate headings for each section WIP
-const animateHeadings = document.querySelectorAll('.animate-heading');
+// Animate headings
 animateHeadings.forEach((heading) => {
   const animateHeading = heading.querySelector('h2');
   const animateDesc = heading.querySelector('p');
+  //
   gsap.from(animateHeading, {
     scrollTrigger: {
       trigger: heading
     },
-    y: 24,
-    opacity: 0,
-    autoAlpha: 0,
-    duration: 1,
-    ease: 'ease.out'
+    y: 24
   });
+  //
   gsap.from(animateDesc, {
     scrollTrigger: {
       trigger: heading
     },
-    y: 24,
-    opacity: 0,
-    autoAlpha: 0,
-    duration: 1,
-    ease: 'ease.out'
+    y: 24
   });
 });
 
 // Animate each skill listed
-const animateSkills = document.querySelectorAll('.animate-skill');
 animateSkills.forEach((heading) => {
   gsap.from(heading, {
     scrollTrigger: {
       trigger: heading
     },
     y: 24,
-    opacity: 0,
-    autoAlpha: 0,
-    duration: 1,
-    delay: 0.5,
-    ease: 'ease.out'
+    delay: 0.5
   });
 });
 
 // Projects Scroll Triggers
-const projectContainer = document.getElementById('projects');
-const projectCards = projectContainer.querySelectorAll('.project-card');
-
 projectCards.forEach((card) => {
   gsap.from(card, {
     scrollTrigger: {
       trigger: card
     },
     y: 24,
-    opacity: 0,
-    autoAlpha: 0,
-    duration: 1,
-    delay: 0.25,
-    ease: 'ease.out'
+    delay: 0.25
   });
 });
 
 // About section
-const animateAbout = document.getElementById('about');
-
 gsap.from(animateAbout, {
   scrollTrigger: {
     trigger: animateAbout
   },
-  y: 24,
-  opacity: 0,
-  autoAlpha: 0,
-  duration: 1,
-  delay: 0.5,
-  ease: 'ease.out'
+  y: 24
 });
 
-// Footer
-const animateFooter = document.querySelector('footer');
-
+// Footer, animate with about section
 gsap.from(animateFooter, {
   scrollTrigger: {
-    trigger: animateFooter
+    trigger: animateAbout
   },
-  y: 24,
-  opacity: 0,
-  autoAlpha: 0,
-  duration: 1,
-  delay: 0.5,
-  ease: 'ease.out'
+  y: 24
 });
 
 // Nav Items Hover
