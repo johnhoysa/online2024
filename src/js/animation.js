@@ -14,7 +14,7 @@ gsap.from(navigation, {
   opacity: 0,
   autoAlpha: 0,
   duration: 1,
-  delay: 0.25,
+  delay: 0.5,
   ease: 'ease.out'
 });
 
@@ -25,37 +25,10 @@ gsap.from(header, {
   autoAlpha: 0,
   ease: 'ease.out',
   duration: 1,
-  delay: 0.5
+  delay: 0.75
 });
 
-// Animate Skill subheading and icon
-const animateIconHeadings = document.querySelectorAll('.animate-icon-heading');
-animateIconHeadings.forEach((heading) => {
-  const animateIcon = heading.querySelector('object');
-  const animateHeading = heading.querySelector('h3');
-
-  gsap.from(animateIcon, {
-    scrollTrigger: {
-      trigger: animateIconHeadings
-    },
-    x: -24,
-    opacity: 0,
-    autoAlpha: 0,
-    duration: 1
-  });
-
-  gsap.from(animateHeading, {
-    scrollTrigger: {
-      trigger: animateIconHeadings
-    },
-    x: 24,
-    opacity: 0,
-    autoAlpha: 0,
-    duration: 1
-  });
-});
-
-// Animate headings for each section
+// Animate headings for each section WIP
 const animateHeadings = document.querySelectorAll('.animate-heading');
 animateHeadings.forEach((heading) => {
   const animateHeading = heading.querySelector('h2');
@@ -64,19 +37,39 @@ animateHeadings.forEach((heading) => {
     scrollTrigger: {
       trigger: heading
     },
-    x: -24,
+    y: 24,
     opacity: 0,
     autoAlpha: 0,
-    duration: 1
+    duration: 0.75
   });
   gsap.from(animateDesc, {
     scrollTrigger: {
       trigger: heading
     },
-    x: 24,
+    y: 24,
     opacity: 0,
     autoAlpha: 0,
-    duration: 1
+    duration: 0.75
+  });
+});
+
+// Animate Skills
+const animateSkills = document.querySelectorAll('.animate-skill');
+animateSkills.forEach((heading) => {
+  const animateIcon = heading.querySelector('object');
+  const animateHeading = heading.querySelector('h3');
+  const animatePara = heading.querySelector('p');
+
+  // Icons
+  gsap.from(heading, {
+    scrollTrigger: {
+      trigger: animateSkills
+    },
+    y: 24,
+    opacity: 0,
+    autoAlpha: 0,
+    duration: 1,
+    delay: 0.5
   });
 });
 
