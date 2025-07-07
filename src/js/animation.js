@@ -93,55 +93,46 @@ gsap.from(animateFooter, {
 });
 
 //
-//
-//
-document.addEventListener('DOMContentLoaded', () => {
-  // Reusable animation function
-  function setupHoverAnimation(selector, targetSelector, animationProps) {
-    const items = document.querySelectorAll(selector);
+// Hover animations for nav and social
+// not all animations have a targetSelector, use null like I did for social icons
+function setupHoverAnimation(selector, targetSelector, animationProps) {
+  const items = document.querySelectorAll(selector);
 
-    items.forEach((item) => {
-      const target = targetSelector ? item.querySelector(targetSelector) : item;
+  items.forEach((item) => {
+    // target is the item that will be animated
+    const target = targetSelector ? item.querySelector(targetSelector) : item;
 
-      const tl = gsap.timeline({ paused: true });
-      tl.to(target, animationProps);
+    const tl = gsap.timeline({ paused: true });
+    tl.to(target, animationProps);
 
-      item.addEventListener('mouseenter', () => tl.play());
-      item.addEventListener('mouseleave', () => tl.reverse());
-      item.addEventListener('click', () => tl.play());
-    });
-  }
-
-  // For nav items (underline divs)
-  setupHoverAnimation('#navItems li', 'div', {
-    y: 12,
-    opacity: 1,
-    autoAlpha: 1,
-    duration: 0.5,
-    ease: 'ease.inOut'
+    item.addEventListener('mouseenter', () => tl.play());
+    item.addEventListener('mouseleave', () => tl.reverse());
+    item.addEventListener('click', () => tl.play());
   });
+}
 
-  // For social items (background color change on <li>)
-  setupHoverAnimation(
-    '#navSocial li',
-    null, // the <li> itself
-    {
-      backgroundColor: '#EE684A',
-      duration: 0.5,
-      ease: 'ease.inOut',
-      opacity: 1,
-      autoAlpha: 1
-    }
-  );
-  setupHoverAnimation(
-    '#navSocialFooter li',
-    null, // the <li> itself
-    {
-      backgroundColor: '#EE684A',
-      duration: 0.5,
-      ease: 'ease.inOut',
-      opacity: 1,
-      autoAlpha: 1
-    }
-  );
+// For nav items (underline divs)
+setupHoverAnimation('#navItems li', 'div', {
+  y: 12,
+  opacity: 1,
+  autoAlpha: 1,
+  duration: 0.5,
+  ease: 'ease.inOut'
+});
+
+// social icons header
+setupHoverAnimation('#navSocial li', null, {
+  backgroundColor: '#EE684A',
+  duration: 0.5,
+  ease: 'ease.inOut',
+  opacity: 1,
+  autoAlpha: 1
+});
+// social icons footer
+setupHoverAnimation('#navSocialFooter li', null, {
+  backgroundColor: '#EE684A',
+  duration: 0.5,
+  ease: 'ease.inOut',
+  opacity: 1,
+  autoAlpha: 1
 });
