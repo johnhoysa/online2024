@@ -40,7 +40,8 @@ animateHeadings.forEach((heading) => {
     y: 24,
     opacity: 0,
     autoAlpha: 0,
-    duration: 0.75
+    duration: 0.75,
+    ease: 'ease.out'
   });
   gsap.from(animateDesc, {
     scrollTrigger: {
@@ -49,7 +50,8 @@ animateHeadings.forEach((heading) => {
     y: 24,
     opacity: 0,
     autoAlpha: 0,
-    duration: 0.75
+    duration: 0.75,
+    ease: 'ease.out'
   });
 });
 
@@ -64,7 +66,8 @@ animateSkills.forEach((heading) => {
     opacity: 0,
     autoAlpha: 0,
     duration: 1,
-    delay: 0.5
+    delay: 0.5,
+    ease: 'ease.out'
   });
 });
 
@@ -80,8 +83,25 @@ projectCards.forEach((card) => {
     y: 24,
     opacity: 0,
     autoAlpha: 0,
-    duration: 1
+    duration: 1,
+    delay: 0.25,
+    ease: 'ease.out'
   });
+});
+
+// About section
+const animateAbout = document.getElementById('about');
+
+gsap.from(animateAbout, {
+  scrollTrigger: {
+    trigger: animateAbout
+  },
+  y: 24,
+  opacity: 0,
+  autoAlpha: 0,
+  duration: 1,
+  delay: 0.5,
+  ease: 'ease.out'
 });
 
 // Nav Items Hover
