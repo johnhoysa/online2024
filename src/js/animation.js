@@ -92,88 +92,56 @@ gsap.from(animateFooter, {
   y: 24
 });
 
-// Nav Items Hover
+//
+//
+//
 document.addEventListener('DOMContentLoaded', () => {
-  const navItems = document.querySelectorAll('#navItems li');
+  // Reusable animation function
+  function setupHoverAnimation(selector, targetSelector, animationProps) {
+    const items = document.querySelectorAll(selector);
 
-  navItems.forEach((item) => {
-    const underline = item.querySelector('div');
+    items.forEach((item) => {
+      const target = targetSelector ? item.querySelector(targetSelector) : item;
 
-    // Create a timeline paused by default
-    const tl = gsap.timeline({ paused: true });
-    tl.to(underline, {
-      y: 12,
+      const tl = gsap.timeline({ paused: true });
+      tl.to(target, animationProps);
+
+      item.addEventListener('mouseenter', () => tl.play());
+      item.addEventListener('mouseleave', () => tl.reverse());
+      item.addEventListener('click', () => tl.play());
+    });
+  }
+
+  // For nav items (underline divs)
+  setupHoverAnimation('#navItems li', 'div', {
+    y: 12,
+    opacity: 1,
+    autoAlpha: 1,
+    duration: 0.5,
+    ease: 'ease.inOut'
+  });
+
+  // For social items (background color change on <li>)
+  setupHoverAnimation(
+    '#navSocial li',
+    null, // the <li> itself
+    {
+      backgroundColor: '#EE684A',
+      duration: 0.5,
+      ease: 'ease.inOut',
       opacity: 1,
-      autoAlpha: 1,
+      autoAlpha: 1
+    }
+  );
+  setupHoverAnimation(
+    '#navSocialFooter li',
+    null, // the <li> itself
+    {
+      backgroundColor: '#EE684A',
       duration: 0.5,
-      ease: 'ease.inOut'
-    });
-
-    item.addEventListener('mouseenter', () => {
-      tl.play();
-    });
-
-    item.addEventListener('mouseleave', () => {
-      tl.reverse();
-    });
-    item.addEventListener('click', () => {
-      tl.play();
-    });
-  });
-});
-
-// Social Items Header Hover
-document.addEventListener('DOMContentLoaded', () => {
-  const navSocialItems = document.querySelectorAll('#navSocial li');
-
-  navSocialItems.forEach((item) => {
-    const circleBG = item;
-
-    // Create a timeline paused by default
-    const tl = gsap.timeline({ paused: true });
-    tl.to(circleBG, {
-      background: '#EE684A',
-      duration: 0.5,
-      ease: 'ease.inOut'
-    });
-
-    item.addEventListener('mouseenter', () => {
-      tl.play();
-    });
-
-    item.addEventListener('mouseleave', () => {
-      tl.reverse();
-    });
-    item.addEventListener('click', () => {
-      tl.play();
-    });
-  });
-});
-
-// Social Items Footer Hover
-document.addEventListener('DOMContentLoaded', () => {
-  const navSocialItems = document.querySelectorAll('#navSocialFooter li');
-
-  navSocialItems.forEach((item) => {
-    const circleBG = item;
-
-    // Create a timeline paused by default
-    const tl = gsap.timeline({ paused: true });
-    tl.to(circleBG, {
-      background: '#EE684A',
-      duration: 0.5,
-      ease: 'ease.inOut'
-    });
-
-    item.addEventListener('mouseenter', () => {
-      tl.play();
-    });
-
-    item.addEventListener('mouseleave', () => {
-      tl.reverse();
-    });
-    item.addEventListener('click', () => {
-      tl.play();
-    });
-  });
+      ease: 'ease.inOut',
+      opacity: 1,
+      autoAlpha: 1
+    }
+  );
 });
