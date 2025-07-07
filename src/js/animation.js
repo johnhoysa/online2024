@@ -1,10 +1,9 @@
 // GSAP Imports
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
+import { ScrollSmoother } from 'gsap/ScrollSmoother';
 // Register plugins here
-gsap.registerPlugin(ScrollTrigger);
-
+gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 // Elements to animate or tween
 const navigation = document.getElementById('navigation');
 const header = document.getElementsByTagName('header');
@@ -111,7 +110,7 @@ function setupHoverAnimation(selector, targetSelector, animationProps) {
   });
 }
 
-// For nav items (underline divs)
+//For nav items (underline divs)
 setupHoverAnimation('#navItems li', 'div', {
   y: 12,
   opacity: 1,
@@ -120,7 +119,7 @@ setupHoverAnimation('#navItems li', 'div', {
   ease: 'ease.inOut'
 });
 
-// social icons header
+// social icons header background color
 setupHoverAnimation('#navSocial li', null, {
   backgroundColor: '#EE684A',
   duration: 0.5,
@@ -128,7 +127,7 @@ setupHoverAnimation('#navSocial li', null, {
   opacity: 1,
   autoAlpha: 1
 });
-// social icons footer
+// social icons footer background color
 setupHoverAnimation('#navSocialFooter li', null, {
   backgroundColor: '#EE684A',
   duration: 0.5,
