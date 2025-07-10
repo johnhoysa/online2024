@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HTML Test</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem;
+      background: #2c3e50;
+      color: white;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    #menuToggle {
+      background: none;
+      border: none;
+      color: white;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    nav {
+      display: none;
+      background: #ecf0f1;
+    }
+
+    nav[aria-expanded="true"] {
+      display: block;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 1rem;
+    }
+
+    nav li {
+      margin: 0.5rem 0;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #2c3e50;
+    }
+
+    nav {
+      display: block;
+      max-height: 0;
+      overflow: hidden;
+      background: #ecf0f1;
+      transition: max-height 0.5s ease-out;
+    }
+
+    nav[aria-expanded="true"] {
+      animation: slideDown 0.4s forwards;
+    }
+
+    nav[aria-expanded="false"] {
+      animation: slideUp 0.4s forwards;
+    }
+
+    @keyframes slideDown {
+      0% {
+        max-height: 0;
+        opacity: 0;
+      }
+
+      100% {
+        max-height: 300px;
+        /* Adjust as needed */
+        opacity: 1;
+      }
+    }
+
+    @keyframes slideUp {
+      0% {
+        max-height: 300px;
+        opacity: 1;
+      }
+
+      100% {
+        max-height: 0;
+        opacity: 0;
+      }
+    }
+
+    .content-section {
+      display: none;
+      padding: 1rem;
+    }
+
+    .content-section.active {
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header role="banner">
+    <div class="logo">MySite</div>
+    <button id="menuToggle" aria-label="Toggle navigation menu" aria-controls="siteNav" aria-expanded="false">
+      ☰ Menu
+    </button>
+  </header>
+
+  <nav id="siteNav" role="navigation" aria-expanded="false">
+    <ul>
+      <li><a href="#home" data-target="home">Home</a></li>
+      <li><a href="#about" data-target="about">About</a></li>
+      <li><a href="#contact" data-target="contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section id="home" class="content-section active" role="region" aria-label="Home section">
+      <h2>Welcome Home</h2>
+      <p>This is the home content.</p>
+    </section>
+    <section id="about" class="content-section" role="region" aria-label="About section">
+      <h2>About Us</h2>
+      <p>This is the about content.</p>
+    </section>
+    <section id="contact" class="content-section" role="region" aria-label="Contact section">
+      <h2>Contact</h2>
+      <p>This is the contact content.</p>
+    </section>
+  </main>
+
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const nav = document.getElementById('siteNav');
+    const links = nav.querySelectorAll('a');
+    const sections = document.querySelectorAll('.content-section');
+
+    menuToggle.addEventListener('click', () => {
+      const expanded = nav.getAttribute('aria-expanded') === 'true';
+      nav.setAttribute('aria-expanded', !expanded);
+      menuToggle.setAttribute('aria-expanded', !expanded);
+    });
+
+
+    links.forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const targetId = link.getAttribute('data-target');
+
+        // Hide all sections
+        sections.forEach(section => {
+          section.classList.remove('active');
+        });
+
+        // Show target section
+        document.getElementById(targetId).classList.add('active');
+
+        // Hide nav
+        nav.setAttribute('aria-expanded', 'false');
+        menuToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  </script>
+
+</body>
+
+</html>
