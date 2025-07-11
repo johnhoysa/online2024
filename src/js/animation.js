@@ -10,7 +10,11 @@ const header = document.getElementsByTagName('header');
 const animateHeadings = document.querySelectorAll('.animate-heading');
 const animateSkills = document.querySelectorAll('.animate-skill');
 const projectContainer = document.getElementById('projects');
-const projectCards = projectContainer.querySelectorAll('.project-card');
+let projectCards = [];
+
+if (projectContainer) {
+  projectCards = projectContainer.querySelectorAll('.project-card');
+}
 const animateAbout = document.getElementById('about');
 const animateFooter = document.querySelector('footer');
 
@@ -23,73 +27,86 @@ gsap.defaults({
 });
 
 // Navigation
-gsap.from(navigation, {
-  delay: 0.5
-});
-
-// Header
-gsap.from(header, {
-  y: 24,
-  delay: 0.75
-});
-
-// Animate headings
-animateHeadings.forEach((heading) => {
-  const animateHeading = heading.querySelector('h2');
-  const animateDesc = heading.querySelector('p');
-  //
-  gsap.from(animateHeading, {
-    scrollTrigger: {
-      trigger: heading
-    },
-    y: 24
-  });
-  //
-  gsap.from(animateDesc, {
-    scrollTrigger: {
-      trigger: heading
-    },
-    y: 24
-  });
-});
-
-// Animate each skill listed
-animateSkills.forEach((heading) => {
-  gsap.from(heading, {
-    scrollTrigger: {
-      trigger: heading
-    },
-    y: 24,
+if (navigation) {
+  gsap.from(navigation, {
     delay: 0.5
   });
-});
+}
+
+// Header
+if (header) {
+  gsap.from(header, {
+    y: 24,
+    delay: 0.75
+  });
+}
+
+// Animate headings
+if (animateHeadings) {
+  animateHeadings.forEach((heading) => {
+    const animateHeading = heading.querySelector('h2');
+    const animateDesc = heading.querySelector('p');
+    //
+    gsap.from(animateHeading, {
+      scrollTrigger: {
+        trigger: heading
+      },
+      y: 24
+    });
+    //
+    gsap.from(animateDesc, {
+      scrollTrigger: {
+        trigger: heading
+      },
+      y: 24
+    });
+  });
+}
+if (animateSkills) {
+  // Animate each skill listed
+  animateSkills.forEach((heading) => {
+    gsap.from(heading, {
+      scrollTrigger: {
+        trigger: heading
+      },
+      y: 24,
+      delay: 0.5
+    });
+  });
+}
 
 // Projects Scroll Triggers
-projectCards.forEach((card) => {
-  gsap.from(card, {
-    scrollTrigger: {
-      trigger: card
-    },
-    y: 24,
-    delay: 0.25
+if (projectCards) {
+  projectCards.forEach((card) => {
+    gsap.from(card, {
+      scrollTrigger: {
+        trigger: card
+      },
+      y: 24,
+      delay: 0.25
+    });
   });
-});
+}
 
 // About section
-gsap.from(animateAbout, {
-  scrollTrigger: {
-    trigger: animateAbout
-  },
-  y: 24
-});
+if (animateAbout) {
+  gsap.from(animateAbout, {
+    scrollTrigger: {
+      trigger: animateAbout
+    },
+    y: 24
+  });
+}
 
 // Footer, animate with about section
-gsap.from(animateFooter, {
-  scrollTrigger: {
-    trigger: animateAbout
-  },
-  y: 24
-});
+if (animateFooter) {
+  gsap.from(animateFooter, {
+    scrollTrigger: {
+      trigger: animateAbout
+    },
+    y: 24
+  });
+}
 
 //
 // Hover animations for nav and social
