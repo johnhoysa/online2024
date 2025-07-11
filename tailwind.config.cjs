@@ -114,5 +114,10 @@ export default {
   },
   plugins: [require('@tailwindcss/aspect-ratio')],
   safelist: [],
-  content: ['*.html', 'index.html', './src/**/*.{css,js,html,twig}']
+  content: [
+    '*.html',
+    'index.html',
+    './smore-code/*.html',
+    './src/**/*.{css,js,html,twig}'
+  ]
 };
