@@ -9,7 +9,7 @@
   <meta name="description" content="John Hoysa, a front-end developer based in Austin texas." />
   <meta name="keywords" content="front-end developer, HTML, CSS, JS, and CMS Integration" />
   <meta name="robots" content="index, follow" />
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
   <meta name="language" content="English" />
   <meta property="og:title" content="John Hoysa" />
   <meta property="og:image" content="https://johnhoysa.com/assets/images/john-hoysa.jpg" />
@@ -20,14 +20,129 @@
   <link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico" />
 </head>
 
-<body class="static p-24 text-base text-white font-primary bg-dirt">
+<body class="static p-0 text-base text-white font-primary bg-dirt">
+  <nav id="navigation" class="fixed lg:px-16 px-8 py-4 md:-mt-16 -mt-[152px] w-full top-36 md:top-16 z-50">
+    <div class="justify-between block max-w-lg mx-auto md:flex">
+      <div class="pt-2 min-w-20 md:pt-0">
+        <img class="min-w-20" src="./assets/images/site/john-hoysa-logo.svg" alt="John Hoysa" width="152px"
+          height="32px" />
+      </div>
+      <ul id="navItems" class="flex gap-8 pt-1 mt-4 text-white anchor-list md:gap-10 md:mt-0 font-primary z-50">
+        <li>
+          <a class="anchor" href="#skills">Skills</a>
+          <div class="w-full h-0.5 -mt-3 opacity-0 bg-pine-cone"></div>
+        </li>
+        <li>
+          <a class="anchor" href="#projects">Projects</a>
+          <div class="w-full h-0.5 -mt-3 opacity-0 bg-pine-cone"></div>
+        </li>
+        <li>
+          <a class="anchor" href="#about">About</a>
+          <div class="w-full h-0.5 -mt-3 opacity-0 bg-pine-cone"></div>
+        </li>
+        <li>
+          <a class="" href="./smore-code/index.html">S'more Code</a>
+          <div class="w-full h-0.5 -mt-3 opacity-0 bg-pine-cone"></div>
+        </li>
+      </ul>
+      <ul id="navSocial" class="items-center hidden h-5 pt-1 mt-4 gap-4 md:mt-0 md:flex md:justify-between z-50">
+        <li class="rounded-full p-2 flex justify-center items-center w-8 h-8">
+          <a href="https://www.linkedin.com/in/johnhoysa">
+            <img src="./assets/images/icons/linkedin.svg" alt="LinkedIn" width="18px" height="18px" />
+          </a>
+        </li>
+        <li class="rounded-full p-2 flex justify-center items-center w-8 h-8">
+          <a href="https://github.com/johnhoysa/">
+            <img src="./assets/images/icons/github.svg" alt="GitHub" width="18px" height="18px" />
+          </a>
+        </li>
+        <li class="rounded-full p-2 flex justify-center items-center w-8 h-8">
+          <a href="mailto:johnhoysa@gmail.com?subject=Correspondence From Site">
+            <img src="./assets/images/icons/email.svg" alt="email" width="18px" height="18px" /></a>
+        </li>
+      </ul>
+    </div>
+  </nav>
 
+  <div class="flex bg-top bg-repeat-x bg-cover bg-hero-mobile md:bg-hero">
+    <header class="flex flex-col items-center max-w-xl px-8 pb-24 mx-auto md:py-40 pt-44 lg:px-16 md:flex-row">
+      <div class="md:basis-1/4 sm:basis-auto">
+        <img class="w-40 md:w-auto" src="./assets/images/site/john-hoysa-hero.png" width="100%" height="auto"
+          alt="Image of John Hoysa" />
+      </div>
+      <h2
+        class="mt-8 xl:text-hero-desktop-xl lg:text-hero-desktop md:text-hero-tablet text-hero-mobile font-primary basis-3/4 text-primary md:ml-16 md:mt-0">
+        Hello, I'm a front-end developer with over 15 years experience working
+        on responsive websites. I specialize in JavaScript, CSS, components,
+        style guides, and content management systems.
+      </h2>
+    </header>
+  </div>
 
+  <main class="lg:mt-36 mt-28">
+    <!-- Skills -->
+    <div id="skills" class="container max-w-lg px-8 mx-auto lg:px-16">
+      <section class="max-w-lg px-4 pb-4 bg-dirt-400 lg:pt-28 pt-14 rounded-2xl">
+        <div class="animate-heading">
+          <h2 class="pl-2 text-3xl lg:pl-4 lg:text-5xl md:text-4xl text-primary">
+            Key Skills
+          </h2>
+          <p class="pt-4 pl-4 lg:w-1/2">
+            My skills contribute to a well-rounded team member capable of
+            tackling a variety of challenges.
+          </p>
+        </div>
+        <div class="grid grid-cols-1 gap-10 mt-6 lg:grid-cols-3 lg:mt-8 bg-dirt-300 rounded-2xl px-10">
 
-  <main class="mt-4">
-    <div class="mt-4">
-      <p>Current Temp in Austin is: <span id="atxTemp"></span></p>
-      <p id="atxMessage"></p>
+          <div class="py-4 lg:py-9 animate-skill">
+            <object class=" fill-primary lg:block" data="./assets/images/icons/development.svg" width="48px"
+              height="48px" aria-hidden="true"></object>
+            <h3 class=" mt-4 ml-2 text-2xl text-primary lg:ml-0 lg:block">
+              Development
+            </h3>
+            <p class="mt-4 text-sm lg:text-base">
+              I build responsive websites using HTML, CSS, and JavaScript,
+              with a strong focus on accessibility, performance, and SEO best
+              practices. I stay current with modern JavaScript frameworks and
+              evolving web standards to ensure the sites I create are fast,
+              inclusive, and future-ready.
+            </p>
+          </div>
+
+          <div class="py-4 lg:py-9 animate-skill">
+            <object class=" fill-primary lg:block" data="./assets/images/icons/cms.svg" width="48px" height="48px"
+              aria-hidden="true"></object>
+            <h3 class=" mt-4 ml-2 text-2xl text-primary lg:ml-0 lg:block">
+              Content Management
+            </h3>
+
+            <p class="mt-4 text-sm lg:text-base">
+              Whether it’s a personal blog or an enterprise-level site, I help
+              design and enhance content management systems (CMS) tailored to
+              your unique needs. As a front-end developer, I specialize in
+              using templating languages, GraphQL, and APIs to present content
+              in a seamless, consistent, and user-focused experience.
+            </p>
+          </div>
+
+          <div class="py-4 lg:py-9 animate-skill">
+            <object class=" fill-primary lg:block" data="./assets/images/icons/ux.svg" width="48px" height="48px"
+              aria-hidden="true"></object>
+            <h3 class=" mt-4 ml-2 text-2xl text-primary lg:ml-0 lg:block">
+              UX
+            </h3>
+
+            <p class="mt-4 text-sm lg:text-base">
+              I enjoy collaborating with design teams to bring their visions
+              to life, ensuring pixel-perfect execution upon launch. I am
+              equally adept at working independently, leveraging existing
+              style guides to design and develop responsive components when a
+              design team is not available.
+            </p>
+          </div>
+
+        </div>
+      </section>
     </div>
 
     <!-- Projects -->
@@ -238,10 +353,6 @@
               <img src="./assets/images/icons/email.svg" alt="Email" width="24px" height="24px" /></a>
           </li>
         </ul>
-        <!-- <p class="mt-4 text-sm">
-          © 2024 The
-          <a href="https://www.jeffmcallister.com/">Design Standard LLC. | Jeff McAllister</a>. All Rights Reserved.
-        </p> -->
       </section>
     </div>
     </footer>

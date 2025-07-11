@@ -2,4 +2,7 @@
 import './css/main.css';
 import './css/resources/fonts.css';
 // JS 2
-import './js/weather-fun.js';
+import './js/anchor-scroll.js';
+import './js/animation.js';
+import './js/lazy-load.js';
+import './js/navigation.js';
