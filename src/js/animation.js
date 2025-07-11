@@ -10,6 +10,7 @@ const header = document.getElementsByTagName('header');
 const animateHeadings = document.querySelectorAll('.animate-heading');
 const animateSkills = document.querySelectorAll('.animate-skill');
 const projectContainer = document.getElementById('projects');
+const smoreBack = document.querySelector('.smore-back');
 let projectCards = [];
 
 if (projectContainer) {
@@ -45,7 +46,7 @@ if (header) {
 if (animateHeadings) {
   animateHeadings.forEach((heading) => {
     const animateHeading = heading.querySelector('h2');
-    const animateDesc = heading.querySelector('p');
+    const animateDesc = heading.querySelectorAll('p');
     //
     gsap.from(animateHeading, {
       scrollTrigger: {
@@ -152,3 +153,10 @@ setupHoverAnimation('#navSocialFooter li', null, {
   opacity: 1,
   autoAlpha: 1
 });
+
+// Smore back button
+if (smoreBack) {
+  gsap.from(smoreBack, {
+    y: 24
+  });
+}
