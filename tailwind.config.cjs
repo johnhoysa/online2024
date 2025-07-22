@@ -20,11 +20,21 @@ export default {
         dirt: '#23201A',
         'dirt-400': '#292622',
         'dirt-300': '#312F2B',
+        'pine-cone-100': '#f7c1b4',
+        'pine-cone-200': '#f19581',
+        'pine-cone-300': '#eb6a4d',
+        'pine-cone-400': '#E63F19',
         'pine-cone': '#EE684A',
+        'northern-lights-50': '#f5fcfa',
+        'northern-lights-100': '#e8f8f4',
+        'northern-lights-200': '#D4F3EC',
+        'northern-lights-300': '#bdede3',
+        'northern-lights-400': '#A7E9DC',
+        'northern-lights-500': '#92E4D5',
         'northern-lights': '#9CE7DB',
+        'accent-blue': '#0593DC',
         primary: '#9CE7DB'
       },
-
       fontFamily: {
         primary: ['Clarika Grotesque', 'serif']
       },

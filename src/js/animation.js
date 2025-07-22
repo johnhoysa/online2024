@@ -160,3 +160,29 @@ if (smoreBack) {
     y: 24
   });
 }
+
+// Hover gradient and animate it
+const smoreProjectCards = document.querySelectorAll(
+  '.smore-project-cards > div'
+);
+//console.log('what is smoreProjectCards?', smoreProjectCards);
+//loop through so we can animate card parts
+smoreProjectCards.forEach((card, index) => {
+  // console.log('what is  card within smores ?', card);
+
+  // Mouseover animation
+  card.addEventListener('mouseover', () => {
+    HoverInLayer = card.querySelector('.hover-layer');
+    // console.log('moused over hey', index);
+    gsap.to(HoverInLayer, { opacity: 0.3, autoAlpha: 0.3 });
+  });
+
+  // Mouseout animation
+  card.addEventListener('mouseout', () => {
+    HoverInLayer = card.querySelector('.hover-layer');
+    // console.log('moused out', index);
+    gsap.to(HoverInLayer, { opacity: 0, autoAlpha: 0 });
+  });
+
+  //
+});
