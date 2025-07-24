@@ -174,14 +174,14 @@ smoreProjectCards.forEach((card, index) => {
   card.addEventListener('mouseover', () => {
     HoverInLayer = card.querySelector('.hover-layer');
     // console.log('moused over hey', index);
-    gsap.to(HoverInLayer, { opacity: 0.3, autoAlpha: 0.3 });
+    gsap.to(HoverInLayer, { opacity: 0.8, autoAlpha: 0.8, y: -200 });
   });
 
   // Mouseout animation
   card.addEventListener('mouseout', () => {
     HoverInLayer = card.querySelector('.hover-layer');
     // console.log('moused out', index);
-    gsap.to(HoverInLayer, { opacity: 0, autoAlpha: 0 });
+    gsap.to(HoverInLayer, { opacity: 0, autoAlpha: 0, y: 0 });
   });
 
   //
