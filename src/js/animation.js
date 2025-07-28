@@ -10,6 +10,7 @@ const header = document.getElementsByTagName('header');
 const animateHeadings = document.querySelectorAll('.animate-heading');
 const animateSkills = document.querySelectorAll('.animate-skill');
 const projectContainer = document.getElementById('projects');
+const smoreProject = document.getElementById('smore-project');
 const smoreBack = document.querySelector('.smore-back');
 let projectCards = [];
 
@@ -154,18 +155,12 @@ setupHoverAnimation('#navSocialFooter li', null, {
   autoAlpha: 1
 });
 
-// Smore back button
-if (smoreBack) {
-  gsap.from(smoreBack, {
-    y: 24
-  });
-}
+//SMORE Project Listings
 
 // Hover gradient and animate it
 const smoreProjectCards = document.querySelectorAll(
   '.smore-project-cards > div'
 );
-//console.log('what is smoreProjectCards?', smoreProjectCards);
 //loop through so we can animate card parts
 smoreProjectCards.forEach((card, index) => {
   // console.log('what is  card within smores ?', card);
@@ -186,3 +181,23 @@ smoreProjectCards.forEach((card, index) => {
 
   //
 });
+//
+// Smore Project Page
+
+// Smore back button
+if (smoreBack) {
+  gsap.from(smoreBack, {
+    y: 24,
+    delay: 0.5
+  });
+}
+
+// Smore back button
+if (smoreProject) {
+  gsap.from(smoreProject, {
+    y: 24,
+    opacity: 0,
+    autoAlpha: 0,
+    delay: 0.5
+  });
+}
