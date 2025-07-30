@@ -58,8 +58,7 @@ if (getData) {
 
           gsap.to(window, {
             duration: 0.5,
-            scrollTo: { y: '#appRickMorty', offsetY: 48 },
-            ease: 'power2.inOut'
+            scrollTo: { y: '#appRickMorty', offsetY: 300 }
           });
 
           // Animate cards in on load
@@ -84,9 +83,9 @@ if (getData) {
             gsap.to(window, {
               duration: 0.5,
               // scrollTo: '#results',
-              scrollTo: { y: '#results', offsetY: 48 },
+              scrollTo: { y: '#results', offsetY: 50 },
               delay: 0.5,
-              ease: 'ease.inOut'
+              ease: 'ease.out'
             });
           });
 
@@ -106,12 +105,12 @@ if (getData) {
         results.innerHTML = `
   <h2 class="text-center mt-20 text-2xl text-white w-full lg:w-3/5 mx-auto">
   Okay, so, get this, multiverse stuff. Which version of me, I mean ${firstName} is, uh, your favorite? No wrong answers! Except maybe some.</h2>
-  <div class="flex flex-wrap gap-6 justify-center mt-8" id="relatedList" aria-live="polite">Loading...</div>`;
+  <div class="flex flex-wrap gap-6 justify-center mt-8 text-white" id="relatedList" aria-live="polite">Loading...</div>`;
       } else {
         results.innerHTML = `
   <h2 class="text-center pt-32 text-2xl text-white w-full lg:w-3/5 mx-auto">
   Okay, so, get this, multiverse stuff. Which version of the ${firstName} is, uh, your favorite? No wrong answers! Except maybe some.</h2>
-  <div class="flex flex-wrap gap-6 justify-center mt-8" id="relatedList" aria-live="polite">Loading...</div>`;
+  <div class="flex text-white flex-wrap gap-6 justify-center mt-8" id="relatedList" aria-live="polite">Loading...</div>`;
       }
 
       // lets fetch content related to the first name
@@ -139,8 +138,10 @@ if (getData) {
             card.classList.add(
               'card',
               'relative',
-              'w-52',
-              'h-80',
+              'w-36',
+              'h-64',
+              'md:w-52',
+              'md:h-80',
               'perspective',
               'cursor-pointer',
               'rounded-lg'
@@ -149,7 +150,7 @@ if (getData) {
               <div class="card__inner absolute inset-0 transition-transform duration-700 preserve-3d rounded-lg bg-white">
               <div
                 class="card__front p-4 absolute inset-0 flex flex-col justify-center items-center text-black text-2xl rounded-lg backface-hidden">
-                <img class="w-full  rounded-md" src="${char.image}" alt="${char.name}">
+                <img class="w-full h-auto rounded-md" src="${char.image}" alt="${char.name}">
                 <h3 class="mt-2 text-center text-base">${char.name}</h3>
                 <p class="text-sm">${char.species}</p>
               </div>
@@ -218,8 +219,7 @@ function animateCardEntrance(card, index) {
     y: 50,
     opacity: 0,
     rotate: randomAngle,
-    delay: index * 0.2,
-    ease: 'power2.out'
+    delay: index * 0.2
   });
 }
 
@@ -271,7 +271,7 @@ function animateRelatedCardHover(cardInner, isClicked, hoverTween) {
     scale: 1,
     duration: 0.3,
     rotate: randomAngle,
-    ease: 'power1.out'
+    ease: 'ease.out'
   });
 }
 // Mouse OUT card
@@ -288,7 +288,7 @@ function animateRelatedCardHoverOut(cardInner, isClicked, hoverTween) {
     duration: 0.3,
     rotate: 0,
     rotate: 0,
-    ease: 'power1.in'
+    ease: 'ease.out'
   });
 }
 
@@ -306,7 +306,7 @@ function animateRelatedCardClick(cardInner, isClicked, hoverTween, clickTween) {
       scale: 1,
       duration: 0.8,
       delay: 0,
-      ease: 'power2.inOut',
+      ease: 'ease.out',
       onComplete: () => fadeOutOtherRelatedCards(cardInner)
     });
   } else {
@@ -316,7 +316,7 @@ function animateRelatedCardClick(cardInner, isClicked, hoverTween, clickTween) {
       scale: 1,
       duration: 0.8,
       delay: 0,
-      ease: 'power2.inOut',
+      ease: 'ease.out',
       onComplete: () => restoreAllRelatedCards()
     });
   }
@@ -333,21 +333,27 @@ function fadeOutOtherRelatedCards(clickedCardInner) {
       // ACTIVE CARD
       card.classList.add('clicked-on');
       gsap.to(card, {
-        y: 80,
+        y: 108,
         scale: 1.2,
         duration: 0.7,
-        ease: 'power1.out',
+        ease: 'ease.out',
         onComplete: () => {
+          gsap.to(window, {
+            duration: 0.5,
+            scrollTo: { y: '#results', offsetY: 50 },
+            ease: 'ease.out'
+          });
+
           gsap.to(card, {
             scale: 1,
             duration: 0.7,
             y: 0,
-            ease: 'power1.out'
-          });
-          gsap.to(window, {
-            duration: 0.5,
-            scrollTo: { y: '#results', offsetY: 48 },
-            ease: 'power2.inOut'
+            ease: 'ease.out',
+            onComplete: () => {
+              console.log('Party Time 1999');
+              // want cool animation here to celebrate choosing a favorite
+              //
+            }
           });
           //
           // add button to page to reset selection
@@ -387,7 +393,7 @@ function fadeOutOtherRelatedCards(clickedCardInner) {
         opacity: 0,
         scale: 0.2,
         duration: 0.7,
-        ease: 'power2.out',
+        ease: 'ease.out',
         onComplete: () => {
           card.style.display = 'none';
         }
