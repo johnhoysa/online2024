@@ -58,7 +58,7 @@ if (getData) {
 
           gsap.to(window, {
             duration: 0.5,
-            scrollTo: { y: '#appRickMorty', offsetY: 50 }
+            scrollTo: { y: '#appRickMorty', offsetY: 124 }
           });
 
           // Animate cards in on load
@@ -83,7 +83,7 @@ if (getData) {
             gsap.to(window, {
               duration: 0.5,
               // scrollTo: '#results',
-              scrollTo: { y: '#results', offsetY: 50 },
+              scrollTo: { y: '#results', offsetY: 124 },
               delay: 0.5,
               ease: 'ease.out'
             });
@@ -369,7 +369,7 @@ function fadeOutOtherRelatedCards(clickedCardInner) {
         onComplete: () => {
           gsap.to(window, {
             duration: 0.5,
-            scrollTo: { y: '#results', offsetY: 50 },
+            scrollTo: { y: '#results', offsetY: 124 },
             ease: 'ease.out'
           });
 
