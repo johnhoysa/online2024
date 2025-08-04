@@ -405,9 +405,9 @@ function fadeOutOtherRelatedCards(clickedCardInner) {
               //
             }
           });
-          //
-          card.style.pointerEvents = 'none'; // Disable further clicks
-          card.style.cursor = 'default'; // Change cursor to indicate it's
+          // Disable further clicks
+          card.style.pointerEvents = 'none';
+          card.style.cursor = 'default';
           // add button to page to reset selection
           relatedList.insertAdjacentHTML(
             'afterend',
@@ -426,6 +426,7 @@ function fadeOutOtherRelatedCards(clickedCardInner) {
         scale: 0.2,
         duration: 0.7,
         ease: 'ease.out',
+        // hide the elements to move selected card into location
         onComplete: () => {
           card.style.display = 'none';
         }
@@ -433,6 +434,7 @@ function fadeOutOtherRelatedCards(clickedCardInner) {
     }
   });
 }
+
 // Reset and scroll back to top
 function resetCards() {
   const resetApp = document.querySelector('#resetApp');
