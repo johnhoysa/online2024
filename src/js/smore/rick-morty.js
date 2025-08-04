@@ -6,7 +6,7 @@ import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
 // get family members using API
-const getData = document.getElementById('letsStart'); // Rename this variable and element
+const startButton = document.getElementById('letsStart');
 const appContainer = document.getElementById('appRickMorty');
 // add intial html to page
 const html = `
@@ -16,10 +16,10 @@ const html = `
 `;
 
 // Button action
-if (getData) {
-  getData.addEventListener('click', () => {
+if (startButton) {
+  startButton.addEventListener('click', () => {
     // Disable
-    getData.disabled = true;
+    startButton.disabled = true;
     appContainer.innerHTML = html;
 
     // if user requested a reset, place the element back in place
@@ -92,6 +92,11 @@ if (getData) {
 
           container.appendChild(card);
         });
+      })
+      .catch(() => {
+        if (appContainer) {
+          appContainer.innerHTML = `<h2 class="text-center text-red-400 py-8">Nothing loaded? Great. Just great. I probably messed something up, didn't I?</h2>`;
+        }
       });
 
     //
@@ -244,7 +249,7 @@ if (getData) {
         // Error  message
         .catch(() => {
           document.getElementById('relatedList').textContent =
-            `Nothing loaded? Great. Just great. I probably messed something up, didn't I?`;
+            `<h2 class="text-center text-red-400 py-8">Nothing loaded? Great. Just great. I probably messed something up, didn't I?</h2>`;
         });
     }
   });
@@ -354,7 +359,7 @@ function animateRelatedCardClick(cardInner, isClicked, hoverTween, clickTween) {
     });
   } else {
     // This is no longer in use but was part of my original plan
-    // Optionally, animate flipping back to front
+    // Animate flipping back to front
     newClickTween = gsap.to(cardInner, {
       rotationY: 0,
       scale: 1,
@@ -367,7 +372,7 @@ function animateRelatedCardClick(cardInner, isClicked, hoverTween, clickTween) {
   return { isClicked: newIsClicked, clickTween: newClickTween };
 }
 
-// Fade out all other related cards except the clicked card
+// Fade out related cards except the clicked card
 function fadeOutOtherRelatedCards(clickedCardInner) {
   const relatedList = document.querySelector('#relatedList');
   const allCards = document.querySelectorAll('#relatedList > .card');
@@ -400,7 +405,9 @@ function fadeOutOtherRelatedCards(clickedCardInner) {
               //
             }
           });
-          //
+          // Disable further clicks
+          card.style.pointerEvents = 'none';
+          card.style.cursor = 'default';
           // add button to page to reset selection
           relatedList.insertAdjacentHTML(
             'afterend',
@@ -419,6 +426,7 @@ function fadeOutOtherRelatedCards(clickedCardInner) {
         scale: 0.2,
         duration: 0.7,
         ease: 'ease.out',
+        // hide the elements to move selected card into location
         onComplete: () => {
           card.style.display = 'none';
         }
@@ -426,6 +434,7 @@ function fadeOutOtherRelatedCards(clickedCardInner) {
     }
   });
 }
+
 // Reset and scroll back to top
 function resetCards() {
   const resetApp = document.querySelector('#resetApp');
@@ -436,7 +445,7 @@ function resetCards() {
       scrollTo: 'body',
       // Hide family cards once scrolled back to top
       onComplete: () => {
-        getData.disabled = false;
+        startButton.disabled = false;
         gsap.to(appContainer, {
           opacity: 0,
           y: 300,
