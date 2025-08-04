@@ -6,7 +6,7 @@ import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
 // get family members using API
-const getData = document.getElementById('letsStart');
+const getData = document.getElementById('letsStart'); // Rename this variable and element
 const appContainer = document.getElementById('appRickMorty');
 // add intial html to page
 const html = `
@@ -62,7 +62,7 @@ if (getData) {
             scrollTo: { y: '#appRickMorty', offsetY: 124 }
           });
 
-          // Animate cards on load
+          // Animate cards in on load
           animateCardEntrance(card, index);
 
           // On mouse enter
@@ -106,7 +106,7 @@ if (getData) {
         results.innerHTML = `
   <h2 class="text-center text-2xl text-white w-full lg:w-3/5 mx-auto">
   Okay, so, get this, multiverse stuff. Which version of me, I mean ${firstName} is, uh, your favorite? No wrong answers! Except maybe some.</h2>
-  <div class="flex flex-wrap gap-6 justify-center mt-8 text-white" id="relatedList" aria-live="polite">I can't wait...</div>`;
+  <div class="flex flex-wrap gap-6 justify-center mt-8 text-white" id="relatedList" aria-live="polite">Please pick me...</div>`;
       } else if (firstName == 'Rick') {
         results.innerHTML = `
   <h2 class="text-center text-2xl text-white w-full lg:w-3/5 mx-auto">
@@ -117,7 +117,7 @@ if (getData) {
         results.innerHTML = `
   <h2 class="text-center text-2xl text-white w-full lg:w-3/5 mx-auto">
   Okay, so, get this, multiverse stuff. Which version of the ${firstName} is, uh, your favorite? No wrong answers! Except maybe some.</h2>
-  <div class="flex text-white flex-wrap gap-6 justify-center mt-8" id="relatedList" aria-live="polite">Loading more ${firstName}s...</div>`;
+  <div class="flex text-white flex-wrap gap-6 justify-center mt-8" id="relatedList" aria-live="polite">Loading...</div>`;
       }
 
       // Fetch content related to the first name
@@ -143,6 +143,7 @@ if (getData) {
             if (char.id == 2) {
               cardBack = `<p>You picked Morty? That's awesome! I mean, I raised him, y'know. Well—Beth and I. Mostly Beth. But I was there!</p>`;
             }
+            // random other character
             if (char.id == 118) {
               cardBack = `<p>Wait… Morty's in charge of a shadow government now? Since when does he get to be the smart one?</p>`;
             }
@@ -161,6 +162,7 @@ if (getData) {
             if (char.id == 667) {
               cardBack = `<p>She's like Beth if Beth had no filter, no mercy, and absolutely no patience for me.</p>`;
             }
+
             // if Jerry, human
             if (char.id == 5) {
               cardBack = `<p>I'm your favorite? Oh jeez… Beth! Beth, did you hear that? Somebody actually likes me!</p>`;
@@ -200,21 +202,42 @@ if (getData) {
             // Animate cards in
             animateCardEntrance(card, index);
 
+            // At one point I allowed the user to click on multiple cards but decided against it
+            // Left code in just in case I wanted to use it again
+            let isClicked = false; // tracks if card clicked
+            let hoverTween = null; // Tracks hover animation
+            let clickTween = null; // Tracks click animation
+
             let cardInner = card.querySelector('.card__inner');
 
             // mouse enter
             card.addEventListener('mouseenter', () => {
-              hoverTween = animateRelatedCardHover(cardInner);
+              hoverTween = animateRelatedCardHover(
+                cardInner,
+                isClicked,
+                hoverTween
+              );
             });
 
             // mouse leave
             card.addEventListener('mouseleave', () => {
-              hoverTween = animateRelatedCardHoverOut(cardInner);
+              hoverTween = animateRelatedCardHoverOut(
+                cardInner,
+                isClicked,
+                hoverTween
+              );
             });
 
             // mouse click
             card.addEventListener('click', () => {
-              const result = animateRelatedCardClick(cardInner);
+              const result = animateRelatedCardClick(
+                cardInner,
+                isClicked,
+                hoverTween,
+                clickTween
+              );
+              isClicked = result.isClicked;
+              clickTween = result.clickTween;
             });
           });
         })
@@ -281,9 +304,10 @@ function animateCardHoverOut(card) {
 // Animations for related cards
 //
 // Mouse over card
-function animateRelatedCardHover() {
+function animateRelatedCardHover(cardInner, isClicked, hoverTween) {
   const randomAngle = randomRotation();
-
+  if (isClicked) return hoverTween;
+  if (hoverTween) hoverTween.kill();
   //
   return gsap.to(cardInner, {
     scale: 1,
@@ -293,8 +317,14 @@ function animateRelatedCardHover() {
   });
 }
 // Mouse out card
-function animateRelatedCardHoverOut() {
-  gsap.to(cardInner, {
+function animateRelatedCardHoverOut(cardInner, isClicked, hoverTween) {
+  //
+  const randomAngle = randomRotation();
+  //
+  if (isClicked) return hoverTween;
+  if (hoverTween) hoverTween.kill();
+  //
+  return gsap.to(cardInner, {
     scale: 1,
     backgroundColor: '#ffffff', // white
     duration: 0.3,
@@ -305,24 +335,43 @@ function animateRelatedCardHoverOut() {
 }
 
 // Click card
-function animateRelatedCardClick(cardInner) {
+function animateRelatedCardClick(cardInner, isClicked, hoverTween, clickTween) {
   // Toggle click state
+  const newIsClicked = !isClicked;
+  if (hoverTween) hoverTween.kill();
+  if (clickTween) clickTween.kill();
+  let newClickTween = clickTween;
 
-  gsap.to(cardInner, {
-    rotationY: 180,
-    scale: 1,
-    duration: 0.8,
-    delay: 0,
-    ease: 'ease.out',
-    onComplete: () => fadeOutOtherRelatedCards(cardInner)
-  });
+  // If clicked
+  if (newIsClicked) {
+    newClickTween = gsap.to(cardInner, {
+      rotationY: 180,
+      scale: 1,
+      duration: 0.8,
+      delay: 0,
+      ease: 'ease.out',
+      onComplete: () => fadeOutOtherRelatedCards(cardInner)
+    });
+  } else {
+    // This is no longer in use but was part of my original plan
+    // Optionally, animate flipping back to front
+    newClickTween = gsap.to(cardInner, {
+      rotationY: 0,
+      scale: 1,
+      duration: 0.8,
+      delay: 0,
+      ease: 'ease.out',
+      onComplete: () => restoreAllRelatedCards()
+    });
+  }
+  return { isClicked: newIsClicked, clickTween: newClickTween };
 }
 
 // Fade out all other related cards except the clicked card
 function fadeOutOtherRelatedCards(clickedCardInner) {
   const relatedList = document.querySelector('#relatedList');
-  const allOtherCards = document.querySelectorAll('#relatedList > .card');
-  allOtherCards.forEach((card) => {
+  const allCards = document.querySelectorAll('#relatedList > .card');
+  allCards.forEach((card) => {
     const cardInner = card.querySelector('.card__inner');
     if (cardInner === clickedCardInner) {
       // ACTIVE CARD
@@ -348,6 +397,7 @@ function fadeOutOtherRelatedCards(clickedCardInner) {
             onComplete: () => {
               console.log('Party like it is 1999');
               // want cool animation here to celebrate choosing a favorite
+              //
             }
           });
           //
@@ -369,7 +419,6 @@ function fadeOutOtherRelatedCards(clickedCardInner) {
         scale: 0.2,
         duration: 0.7,
         ease: 'ease.out',
-        // Hide cards once faded out
         onComplete: () => {
           card.style.display = 'none';
         }
@@ -399,6 +448,20 @@ function resetCards() {
           }
         });
       }
+    });
+  });
+}
+
+// Restore all related cards to normal state
+function restoreAllRelatedCards() {
+  const allCards = document.querySelectorAll('.card__inner');
+  allCards.forEach((card) => {
+    card.classList.remove('faded-out');
+    gsap.to(card, {
+      opacity: 1,
+      filter: 'none',
+      duration: 0.5,
+      pointerEvents: 'auto'
     });
   });
 }
