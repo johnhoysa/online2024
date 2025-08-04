@@ -56,6 +56,7 @@ if (getData) {
             <h3 class="mt-2 text-center text-base text-dirt">${member.name}</h3>
           `;
 
+          // Scroll to see app
           gsap.to(window, {
             duration: 0.5,
             scrollTo: { y: '#appRickMorty', offsetY: 124 }
@@ -100,20 +101,26 @@ if (getData) {
     //
     function showCharactersByFirstName(firstName) {
       const results = document.getElementById('results');
-      // Show header to section 2
+      // Show header to section 2, show custom header based on firstName
       if (firstName == 'Jerry') {
         results.innerHTML = `
   <h2 class="text-center text-2xl text-white w-full lg:w-3/5 mx-auto">
   Okay, so, get this, multiverse stuff. Which version of me, I mean ${firstName} is, uh, your favorite? No wrong answers! Except maybe some.</h2>
   <div class="flex flex-wrap gap-6 justify-center mt-8 text-white" id="relatedList" aria-live="polite">Loading...</div>`;
+      } else if (firstName == 'Rick') {
+        results.innerHTML = `
+  <h2 class="text-center text-2xl text-white w-full lg:w-3/5 mx-auto">
+  WOh. Oh, okay. So I specifically asked you not to pick ${firstName}… and then you picked ${firstName}. That's fine. That's totally fine. I'm not crying—you're crying.</h2>
+  <div class="flex flex-wrap gap-6 justify-center mt-8 text-white" id="relatedList" aria-live="polite">Loading more Ricks...</div>`;
       } else {
+        // Default message
         results.innerHTML = `
   <h2 class="text-center text-2xl text-white w-full lg:w-3/5 mx-auto">
   Okay, so, get this, multiverse stuff. Which version of the ${firstName} is, uh, your favorite? No wrong answers! Except maybe some.</h2>
   <div class="flex text-white flex-wrap gap-6 justify-center mt-8" id="relatedList" aria-live="polite">Loading...</div>`;
       }
 
-      // lets fetch content related to the first name
+      // Fetch content related to the first name
       fetch(`https://rickandmortyapi.com/api/character/?name=${firstName}`)
         .then((res) => res.json())
         .then((data) => {
