@@ -6,7 +6,7 @@ import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
 // get family members using API
-const getData = document.getElementById('letsStart'); // Rename this variable and element
+const startButton = document.getElementById('letsStart');
 const appContainer = document.getElementById('appRickMorty');
 // add intial html to page
 const html = `
@@ -16,10 +16,10 @@ const html = `
 `;
 
 // Button action
-if (getData) {
-  getData.addEventListener('click', () => {
+if (startButton) {
+  startButton.addEventListener('click', () => {
     // Disable
-    getData.disabled = true;
+    startButton.disabled = true;
     appContainer.innerHTML = html;
 
     // if user requested a reset, place the element back in place
@@ -445,7 +445,7 @@ function resetCards() {
       scrollTo: 'body',
       // Hide family cards once scrolled back to top
       onComplete: () => {
-        getData.disabled = false;
+        startButton.disabled = false;
         gsap.to(appContainer, {
           opacity: 0,
           y: 300,
