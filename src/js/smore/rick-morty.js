@@ -92,6 +92,11 @@ if (getData) {
 
           container.appendChild(card);
         });
+      })
+      .catch(() => {
+        if (appContainer) {
+          appContainer.innerHTML = `<h2 class="text-center text-red-400 py-8">Nothing loaded? Great. Just great. I probably messed something up, didn't I?</h2>`;
+        }
       });
 
     //
@@ -244,7 +249,7 @@ if (getData) {
         // Error  message
         .catch(() => {
           document.getElementById('relatedList').textContent =
-            `Nothing loaded? Great. Just great. I probably messed something up, didn't I?`;
+            `<h2 class="text-center text-red-400 py-8">Nothing loaded? Great. Just great. I probably messed something up, didn't I?</h2>`;
         });
     }
   });
