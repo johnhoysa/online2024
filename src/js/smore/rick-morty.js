@@ -359,7 +359,7 @@ function animateRelatedCardClick(cardInner, isClicked, hoverTween, clickTween) {
     });
   } else {
     // This is no longer in use but was part of my original plan
-    // Optionally, animate flipping back to front
+    // Animate flipping back to front
     newClickTween = gsap.to(cardInner, {
       rotationY: 0,
       scale: 1,
@@ -372,7 +372,7 @@ function animateRelatedCardClick(cardInner, isClicked, hoverTween, clickTween) {
   return { isClicked: newIsClicked, clickTween: newClickTween };
 }
 
-// Fade out all other related cards except the clicked card
+// Fade out related cards except the clicked card
 function fadeOutOtherRelatedCards(clickedCardInner) {
   const relatedList = document.querySelector('#relatedList');
   const allCards = document.querySelectorAll('#relatedList > .card');
@@ -406,6 +406,8 @@ function fadeOutOtherRelatedCards(clickedCardInner) {
             }
           });
           //
+          card.style.pointerEvents = 'none'; // Disable further clicks
+          card.style.cursor = 'default'; // Change cursor to indicate it's
           // add button to page to reset selection
           relatedList.insertAdjacentHTML(
             'afterend',
