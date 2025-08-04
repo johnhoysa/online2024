@@ -44,7 +44,7 @@ if (getData) {
         family.forEach((member, index) => {
           // Create each card
           const card = document.createElement('div');
-          // create variable to determine which animation to use
+          // create variable to determine which animation to use based on order
           const halfIndex = Math.floor(family.length / 2);
 
           // once data is received scroll user to the section
@@ -170,7 +170,7 @@ if (getData) {
               cardBack = `<p>Wow, Self-Congratulatory Jerry? That guy gets it. We celebrate the small wins. Like waking up. And breathing.</p>`;
             }
 
-            // Create the cards
+            // Create the cards for related characters
             card.classList.add(
               'card',
               'relative',
@@ -201,6 +201,8 @@ if (getData) {
             // Animate cards in
             animateCardEntrance(card, index);
 
+            // At one point I allowed the user to click on multiple cards but decided against it
+            // Left code in just in case I wanted to use it again
             let isClicked = false; // tracks if card clicked
             let hoverTween = null; // Tracks hover animation
             let clickTween = null; // Tracks click animation
@@ -241,13 +243,13 @@ if (getData) {
         // Error  message
         .catch(() => {
           document.getElementById('relatedList').textContent =
-            `No characters? Great. Just great. I probably messed something up, didn't I?`;
+            `Nothing loaded? Great. Just great. I probably messed something up, didn't I?`;
         });
     }
   });
 }
-// Animations for family
-//
+// Animations for family cards
+// on load
 function animateCardEntrance(card, index) {
   const randomAngle = randomRotation();
   gsap.from(card, {
@@ -258,7 +260,7 @@ function animateCardEntrance(card, index) {
     delay: index * 0.2
   });
 }
-
+// mouse hover
 function animateCardHover(card, index, halfIndex) {
   gsap.killTweensOf(card);
   gsap.defaults({
@@ -269,6 +271,7 @@ function animateCardHover(card, index, halfIndex) {
     opacity: 1,
     autoAlpha: 1
   });
+  // Rotate cards differently based on relation to center item, Beth
   if (index < halfIndex) {
     gsap.to(card, {
       rotation: -4
@@ -284,6 +287,7 @@ function animateCardHover(card, index, halfIndex) {
   }
 }
 
+// Mouse out
 function animateCardHoverOut(card) {
   gsap.to(card, {
     scale: 1,
@@ -295,9 +299,10 @@ function animateCardHoverOut(card) {
   });
 }
 
+//
 // Animations for related cards
 //
-// Mouse OVER card
+// Mouse over card
 function animateRelatedCardHover(cardInner, isClicked, hoverTween) {
   const randomAngle = randomRotation();
   if (isClicked) return hoverTween;
@@ -310,7 +315,7 @@ function animateRelatedCardHover(cardInner, isClicked, hoverTween) {
     ease: 'ease.out'
   });
 }
-// Mouse OUT card
+// Mouse out card
 function animateRelatedCardHoverOut(cardInner, isClicked, hoverTween) {
   //
   const randomAngle = randomRotation();
@@ -328,7 +333,7 @@ function animateRelatedCardHoverOut(cardInner, isClicked, hoverTween) {
   });
 }
 
-// Click
+// Click card
 function animateRelatedCardClick(cardInner, isClicked, hoverTween, clickTween) {
   // Toggle click state
   const newIsClicked = !isClicked;
@@ -336,6 +341,7 @@ function animateRelatedCardClick(cardInner, isClicked, hoverTween, clickTween) {
   if (clickTween) clickTween.kill();
   let newClickTween = clickTween;
 
+  // If clicked
   if (newIsClicked) {
     newClickTween = gsap.to(cardInner, {
       rotationY: 180,
@@ -346,6 +352,7 @@ function animateRelatedCardClick(cardInner, isClicked, hoverTween, clickTween) {
       onComplete: () => fadeOutOtherRelatedCards(cardInner)
     });
   } else {
+    // This is no longer in use but was part of my orginal plan
     // Optionally, animate flipping back to front
     newClickTween = gsap.to(cardInner, {
       rotationY: 0,
@@ -359,7 +366,7 @@ function animateRelatedCardClick(cardInner, isClicked, hoverTween, clickTween) {
   return { isClicked: newIsClicked, clickTween: newClickTween };
 }
 
-// Helper: Fade out all other related cards except the clicked one
+// Fade out all other related cards except the clicked card
 function fadeOutOtherRelatedCards(clickedCardInner) {
   const relatedList = document.querySelector('#relatedList');
   const allCards = document.querySelectorAll('#relatedList > .card');
@@ -373,6 +380,7 @@ function fadeOutOtherRelatedCards(clickedCardInner) {
         scale: 1.2,
         duration: 0.7,
         ease: 'ease.out',
+        // Animate some more
         onComplete: () => {
           gsap.to(window, {
             duration: 0.5,
@@ -417,7 +425,7 @@ function fadeOutOtherRelatedCards(clickedCardInner) {
     }
   });
 }
-// Helper: Restore all related cards to normal state
+// Reset and scroll back to top
 function resetCards() {
   const resetApp = document.querySelector('#resetApp');
   resetApp.addEventListener('click', () => {
@@ -425,6 +433,7 @@ function resetCards() {
     gsap.to(window, {
       duration: 1,
       scrollTo: 'body',
+      // Hide family cards once scrolled back to top
       onComplete: () => {
         getData.disabled = false;
         gsap.to(appContainer, {
@@ -442,7 +451,7 @@ function resetCards() {
   });
 }
 
-// Helper: Restore all related cards to normal state
+// Restore all related cards to normal state
 function restoreAllRelatedCards() {
   const allCards = document.querySelectorAll('.card__inner');
   allCards.forEach((card) => {
