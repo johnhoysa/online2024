@@ -37,14 +37,38 @@ export default {
         primary: ['Clarika Grotesque', 'serif']
       },
       fontSize: {
-        sm: ['16px', { lineHeight: '150%', letterSpacing: '-0.1px', fontWeight: '300' }],
-        base: ['20px', { lineHeight: '150%', letterSpacing: '-0.1px', fontWeight: '300' }],
-        '2xl': ['24px', { lineHeight: '28px', letterSpacing: '-0.1px', fontWeight: '600' }],
-        '5xl': ['40px', { lineHeight: '40px', letterSpacing: '-0.1px', fontWeight: '600' }],
-        'hero-mobile': ['24px', { lineHeight: '120%', letterSpacing: '-0.1px', fontWeight: '500' }],
-        'hero-tablet': ['38px', { lineHeight: '120%', letterSpacing: '-0.1px', fontWeight: '500' }],
-        'hero-desktop': ['48px', { lineHeight: '120%', letterSpacing: '-0.1px', fontWeight: '500' }],
-        'hero-desktop-xl': ['60px', { lineHeight: '120%', letterSpacing: '-0.1px', fontWeight: '500' }]
+        sm: [
+          '16px',
+          { lineHeight: '150%', letterSpacing: '-0.1px', fontWeight: '300' }
+        ],
+        base: [
+          '20px',
+          { lineHeight: '150%', letterSpacing: '-0.1px', fontWeight: '300' }
+        ],
+        '2xl': [
+          '24px',
+          { lineHeight: '28px', letterSpacing: '-0.1px', fontWeight: '600' }
+        ],
+        '5xl': [
+          '40px',
+          { lineHeight: '40px', letterSpacing: '-0.1px', fontWeight: '600' }
+        ],
+        'hero-mobile': [
+          '24px',
+          { lineHeight: '120%', letterSpacing: '-0.1px', fontWeight: '500' }
+        ],
+        'hero-tablet': [
+          '38px',
+          { lineHeight: '120%', letterSpacing: '-0.1px', fontWeight: '500' }
+        ],
+        'hero-desktop': [
+          '48px',
+          { lineHeight: '120%', letterSpacing: '-0.1px', fontWeight: '500' }
+        ],
+        'hero-desktop-xl': [
+          '60px',
+          { lineHeight: '120%', letterSpacing: '-0.1px', fontWeight: '500' }
+        ]
       },
       keyframes: {
         'fade-in': {
@@ -61,5 +85,10 @@ export default {
   },
   plugins: { aspectRatio },
   // Tailwind v4 auto-scans the project; keep content if you want explicit control.
-  content: ['*.html', 'index.html', './smore-code/*.html', './src/**/*.{css,js,html,twig}']
+  content: [
+    '*.html',
+    'index.html',
+    './smore-code/*.html',
+    './src/**/*.{css,js,html,twig}'
+  ]
 };
