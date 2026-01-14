@@ -1,878 +1,686 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>John Hoysa - Technical Project Manager</title>
 
-    <meta
-      name="description"
-      content="John Hoysa, Project Manager with deep roots in front-end development."
-    />
-    <meta
-      name="keywords"
-      content="agile, waterfall, sprint planning, retrospectives, stakeholder engagement"
-    />
-    <meta name="robots" content="index, follow" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>John Hoysa - Technical Project Manager</title>
 
-    <meta name="language" content="English" />
-    <meta property="og:title" content="John Hoysa" />
-    <meta
-      property="og:image"
-      content="https://johnhoysa.com/assets/images/john-hoysa.jpg"
-    />
-    <meta property="og:site_name" content="John Hoysa" />
-    <meta
-      property="og:description"
-      content="John Hoysa, Project Manager with deep roots in front-end development."
-    />
+  <meta name="description" content="John Hoysa, Project Manager with deep roots in front-end development." />
+  <meta name="keywords" content="agile, waterfall, sprint planning, retrospectives, stakeholder engagement" />
+  <meta name="robots" content="index, follow" />
 
-    <link href="./dist/css/styles.css" rel="stylesheet" />
-    <link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico" />
-  </head>
+  <meta name="language" content="English" />
+  <meta property="og:title" content="John Hoysa" />
+  <meta property="og:image" content="https://johnhoysa.com/assets/images/john-hoysa.jpg" />
+  <meta property="og:site_name" content="John Hoysa" />
+  <meta property="og:description" content="John Hoysa, Project Manager with deep roots in front-end development." />
 
-  <body class="static bg-dirt p-0 font-primary text-base text-white">
-    <a
-      href="#main-content"
-      class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:bg-black focus:px-4 focus:py-2 focus:text-white"
-    >
-      Skip to main content
-    </a>
-    <nav
-      id="navigation"
-      aria-label="Main navigation"
-      class="fixed top-36 z-50 -mt-[152px] w-full px-8 py-4 md:top-16 md:-mt-16 lg:px-16"
-    >
-      <div
-        class="mx-auto block max-w-lg justify-between align-baseline md:flex"
-      >
-        <div class="min-w-20 pt-2 md:pt-0">
-          <a href="#main-content" aria-label="John Hoysa homepage">
-            <img
-              class="min-w-20"
-              src="./assets/images/site/john-hoysa-logo.svg"
-              alt="John Hoysa"
-              width="152"
-              height="32"
-            />
+  <link href="./dist/css/styles.css" rel="stylesheet" />
+  <link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico" />
+</head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GRB90KGXEP"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  gtag('config', 'G-GRB90KGXEP');
+</script>
+
+<body class="static p-0 text-base text-white bg-dirt font-primary">
+  <a href="#main-content"
+    class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:bg-black focus:px-4 focus:py-2 focus:text-white">
+    Skip to main content
+  </a>
+  <nav id="navigation" aria-label="Main navigation"
+    class="fixed top-36 z-50 -mt-[152px] w-full px-8 py-4 md:top-16 md:-mt-16 lg:px-16">
+    <div class="justify-between block max-w-lg mx-auto align-baseline md:flex">
+      <div class="pt-2 min-w-20 md:pt-0">
+        <a href="#main-content" aria-label="John Hoysa homepage">
+          <img class="min-w-20" src="./assets/images/site/john-hoysa-logo.svg" alt="John Hoysa" width="152"
+            height="32" />
+        </a>
+      </div>
+      <ul id="navItems"
+        class="z-50 flex gap-4 pt-1 mt-4 text-sm text-white anchor-list font-primary md:mt-0 md:gap-10 md:pt-0 md:text-base">
+        <li>
+          <a class="anchor" href="#skills">Skills</a>
+          <div class="-mt-3 h-0.5 w-full bg-pine-cone opacity-0"></div>
+        </li>
+        <li>
+          <a class="anchor" href="#projects">Projects</a>
+          <div class="-mt-3 h-0.5 w-full bg-pine-cone opacity-0"></div>
+        </li>
+        <li>
+          <a class="anchor" href="#about">About</a>
+          <div class="-mt-3 h-0.5 w-full bg-pine-cone opacity-0"></div>
+        </li>
+      </ul>
+      <ul id="navSocial"
+        class="z-50 mt-4 hidden h-5 items-center gap-4 pt-1 md:mt-0 md:flex md:justify-between md:pt-2.5">
+        <li class="flex items-center justify-center w-8 h-8 p-2 rounded-full">
+          <a href="https://www.linkedin.com/in/johnhoysa" aria-label="LinkedIn profile" rel="noopener noreferrer"
+            target="_blank">
+            <img src="./assets/images/icons/linkedin.svg" alt="" aria-hidden="true" width="18" height="18" />
           </a>
-        </div>
-        <ul
-          id="navItems"
-          class="anchor-list z-50 mt-4 flex gap-4 pt-1 font-primary text-sm text-white md:mt-0 md:gap-10 md:pt-0 md:text-base"
-        >
-          <li>
-            <a class="anchor" href="#skills">Skills</a>
-            <div class="-mt-3 h-0.5 w-full bg-pine-cone opacity-0"></div>
-          </li>
-          <li>
-            <a class="anchor" href="#projects">Projects</a>
-            <div class="-mt-3 h-0.5 w-full bg-pine-cone opacity-0"></div>
-          </li>
-          <li>
-            <a class="anchor" href="#about">About</a>
-            <div class="-mt-3 h-0.5 w-full bg-pine-cone opacity-0"></div>
-          </li>
-        </ul>
-        <ul
-          id="navSocial"
-          class="z-50 mt-4 hidden h-5 items-center gap-4 pt-1 md:mt-0 md:flex md:justify-between md:pt-2.5"
-        >
-          <li class="flex h-8 w-8 items-center justify-center rounded-full p-2">
-            <a
-              href="https://www.linkedin.com/in/johnhoysa"
-              aria-label="LinkedIn profile"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              <img
-                src="./assets/images/icons/linkedin.svg"
-                alt=""
-                aria-hidden="true"
-                width="18"
-                height="18"
-              />
-            </a>
-          </li>
-          <li class="flex h-8 w-8 items-center justify-center rounded-full p-2">
-            <a
-              href="https://github.com/johnhoysa/"
-              aria-label="GitHub profile"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              <img
-                src="./assets/images/icons/github.svg"
-                alt=""
-                aria-hidden="true"
-                width="18"
-                height="18"
-              />
-            </a>
-          </li>
-          <li class="flex h-8 w-8 items-center justify-center rounded-full p-2">
-            <a
-              href="mailto:johnhoysa@gmail.com?subject=Correspondence From Site"
-              aria-label="Email John Hoysa"
-            >
-              <img
-                src="./assets/images/icons/email.svg"
-                alt=""
-                aria-hidden="true"
-                width="18px"
-                height="18px"
-            /></a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-
-    <div class="flex bg-hero-mobile bg-cover bg-top bg-repeat-x md:bg-hero">
-      <header
-        class="mx-auto flex max-w-xl flex-col items-center px-8 pb-24 pt-44 md:flex-row md:py-40 lg:px-16"
-      >
-        <div class="sm:basis-auto md:basis-1/4">
-          <img
-            class="w-40 md:w-auto"
-            src="./assets/images/site/john-hoysa-hero.png"
-            alt="Image of John Hoysa"
-          />
-        </div>
-        <h1
-          class="mt-8 basis-3/4 font-primary text-hero-mobile text-primary md:ml-16 md:mt-0 md:text-hero-tablet lg:text-hero-desktop xl:text-hero-desktop-xl"
-        >
-          Technical Project Manager. Bridging the gap between complex
-          engineering and strategic execution to deliver high-impact digital
-          products.
-        </h1>
-      </header>
+        </li>
+        <li class="flex items-center justify-center w-8 h-8 p-2 rounded-full">
+          <a href="https://github.com/johnhoysa/" aria-label="GitHub profile" rel="noopener noreferrer" target="_blank">
+            <img src="./assets/images/icons/github.svg" alt="" aria-hidden="true" width="18" height="18" />
+          </a>
+        </li>
+        <li class="flex items-center justify-center w-8 h-8 p-2 rounded-full">
+          <a href="mailto:johnhoysa@gmail.com?subject=Correspondence From Site" aria-label="Email John Hoysa">
+            <img src="./assets/images/icons/email.svg" alt="" aria-hidden="true" width="18px" height="18px" /></a>
+        </li>
+      </ul>
     </div>
+  </nav>
 
-    <main id="main-content" class="mt-28 lg:mt-36">
-      <!-- Skills -->
-      <section id="skills" class="container mx-auto max-w-lg px-8 lg:px-16">
-        <div
-          class="max-w-lg rounded-2xl bg-dirt-400 px-4 pb-4 pt-14 lg:pt-28"
-          aria-labelledby="skills-heading"
-        >
-          <div class="animate-heading">
-            <h2
-              id="skills-heading"
-              class="pl-4 text-3xl text-primary md:text-4xl lg:pl-4 lg:text-5xl"
-            >
-              Key Skills
-            </h2>
-            <p class="pl-4 pt-4 lg:w-1/2">
-              I combine technical expertise with strategic project leadership to
-              deliver initiatives that align stakeholders, empower teams, and
-              drive measurable business outcomes.
-            </p>
-          </div>
-          <div
-            class="mt-6 grid grid-cols-1 gap-10 rounded-2xl bg-dirt-300 px-10 lg:mt-8 lg:grid-cols-3"
-          >
-            <article class="animate-skill py-4 lg:py-9">
-              <object
-                class="fill-primary lg:block"
-                data="./assets/images/icons/pm.svg"
-                width="48"
-                height="48"
-                aria-hidden="true"
-              ></object>
-              <h3 class="mt-4 text-2xl text-primary lg:block">
-                Project & Program Management
-              </h3>
-              <p class="mt-4 text-sm lg:text-base">
-                I lead the end-to-end SDLC using Agile, Scrum, and Waterfall
-                methodologies. My focus is on rigorous scope management, budget
-                oversight ($300K+), and stakeholder alignment to ensure
-                high-stakes initiatives are delivered on schedule and within
-                budget.
-              </p>
-            </article>
-
-            <article class="animate-skill py-4 lg:py-9">
-              <object
-                class="fill-primary lg:block"
-                data="./assets/images/icons/development.svg"
-                width="48"
-                height="48"
-                aria-hidden="true"
-              ></object>
-              <h3 class="mt-4 text-2xl text-primary lg:block">
-                Technical Leadership
-              </h3>
-
-              <p class="mt-4 text-sm lg:text-base">
-                I bridge the gap between business vision and engineering
-                execution. Drawing on 10+ years of frontend experience, I
-                translate complex requirements into actionable technical
-                roadmaps, manage vendor relationships, and lead cross-functional
-                teams toward high-fidelity digital products.
-              </p>
-            </article>
-
-            <article class="animate-skill py-4 lg:py-9">
-              <object
-                class="fill-primary lg:block"
-                data="./assets/images/icons/ux.svg"
-                width="48"
-                height="48"
-                aria-hidden="true"
-              ></object>
-              <h3 class="mt-4 text-2xl text-primary lg:block">
-                Process & Operations
-              </h3>
-
-              <p class="mt-4 text-sm lg:text-base">
-                I specialize in operational efficiency, optimizing delivery
-                pipelines, establishing "Definition of Done" standards, and
-                creating comprehensive documentation. I focus on reducing
-                technical debt and streamlining workflows to increase team
-                velocity and ensure long-term platform stability.
-              </p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <!-- Projects -->
-      <section
-        id="projects"
-        class="container mx-auto mt-28 max-w-lg px-8 lg:mt-36 lg:px-16"
-      >
-        <div aria-labelledby="projects-heading">
-          <div class="animate-heading">
-            <h2
-              id="projects-heading"
-              class="text-3xl text-primary md:text-4xl lg:text-5xl"
-            >
-              Project Highlights
-            </h2>
-            <p class="mt-4 text-xl lg:w-1/2">
-              Strategic leadership and technical execution for enterprise,
-              government, and education.
-            </p>
-          </div>
-          <div class="">
-            <!-- Space Commission -->
-            <article
-              class="project-card mx-auto flex flex-col pt-8 lg:flex-row"
-            >
-              <!-- Image Section -->
-              <div class="w-full lg:w-1/2">
-                <figure class="lg:sticky lg:top-24">
-                  <img
-                    class="lazy-load aspect-[16/9] min-w-full rounded-2xl"
-                    src="./assets/images/lazyload.jpg"
-                    data-image="./assets/images/project-images/tsc.jpg"
-                    alt="Texas Space Commission website"
-                  />
-                </figure>
-              </div>
-
-              <!-- Content Section -->
-              <div class="pt-8 lg:w-1/2 lg:px-8 lg:pt-0">
-                <h3 class="text-2xl text-primary lg:text-3xl">
-                  Texas Space Commission
-                </h3>
-                <p class="font-bold">
-                  Technical Project Manager & Lead Developer
-                </p>
-                <p class="mt-4 text-base">
-                  <span class="font-bold text-primary">The Challenge</span
-                  ><br />
-                  Led the Project Initiation and digital launch of a
-                  high-profile state agency following a gap in departmental
-                  leadership. Stepping in at the project's inception, I was
-                  tasked with architecting the digital foundation from the
-                  ground up and establishing a professional web presence for the
-                  new state entity with urgency.
-                </p>
-                <p class="mt-4 text-base font-bold text-primary">
-                  Strategic Leadership & Execution
-                </p>
-                <ul class="list-disc pl-6">
-                  <li>
-                    <span class="font-bold"
-                      >Project Initiation & Foundations:</span
-                    >
-                    Directed the project from "Day Zero," defining the technical
-                    roadmap and establishing the governance necessary to launch
-                    a new state agency without an existing blueprint.
-                  </li>
-                  <li>
-                    <span class="font-bold">Rapid Deployment Strategy:</span>
-                    Focused on high-velocity execution to move from concept to
-                    launch quickly, ensuring the agency had a functional,
-                    secure, and compliant digital presence to support its
-                    legislative mission.
-                  </li>
-                  <li>
-                    <span class="font-bold">Full-Lifecycle Governance:</span>
-                    Served as the central point of contact for the Governor’s
-                    office (DIR) and IT leadership, managing all
-                    cross-functional communication and technical requirements.
-                  </li>
-                  <li>
-                    <span class="font-bold">Agile Orchestration:</span> Directed
-                    the design and development pods through iterative cycles,
-                    prioritizing an MVP that met 100% of state compliance and
-                    security standards while maintaining high design fidelity.
-                  </li>
-                </ul>
-
-                <p class="mt-4 text-base font-bold text-primary">
-                  <strong>The Impact</strong>
-                </p>
-                <ul class="list-disc pl-6">
-                  <li>
-                    <span class="font-bold"
-                      >Successful Agency Inauguration:</span
-                    >
-                    Delivered a stable, foundational digital infrastructure that
-                    provided the agency with immediate credibility and
-                    public-facing utility.
-                  </li>
-                  <li>
-                    <span class="font-bold">Regulatory Compliance:</span>
-                    Achieved 100% adherence to Texas DIR and accessibility
-                    mandates (WCAG 2.1), establishing a secure and scalable
-                    platform for future agency growth.
-                  </li>
-                  <li>
-                    <span class="font-bold">Operational Continuity:</span>
-                    Successfully bridged a critical leadership gap, providing
-                    the technical and project oversight required to move the
-                    project from a standstill to a successful launch.
-                  </li>
-                </ul>
-              </div>
-            </article>
-            <!-- Expedia Group -->
-            <article
-              class="project-card mx-auto flex flex-col pt-16 lg:flex-row"
-            >
-              <!-- Image Section -->
-              <div class="w-full lg:w-1/2">
-                <figure class="lg:sticky lg:top-24">
-                  <img
-                    class="lazy-load aspect-[16/9] min-w-full rounded-2xl"
-                    src="./assets/images/lazyload.jpg"
-                    data-image="./assets/images/project-images/expedia.jpg"
-                    alt="Expedia Group Image of hotel pool"
-                  />
-                </figure>
-              </div>
-
-              <!-- Content Section -->
-              <div class="pt-8 lg:w-1/2 lg:px-8 lg:pt-0">
-                <h3 class="text-2xl text-primary lg:text-3xl">
-                  Expedia Group (B2B Partner and Escapia Platforms)
-                </h3>
-                <p class="font-bold">
-                  Software Engineer II & Technical Project Lead
-                </p>
-                <p class="mt-4 text-base">
-                  <span class="font-bold text-primary">The Challenge</span
-                  ><br />
-                  Assumed frontend ownership of a high-traffic B2B platform
-                  following a third-party agency hand-off. Tasked with
-                  stabilizing the codebase, closing critical feature gaps, and
-                  scaling the platform for 10,000+ global travel partners.
-                </p>
-                <p class="mt-4 text-base font-bold text-primary">
-                  Strategic Execution & Delivery
-                </p>
-                <ul class="list-disc pl-6">
-                  <li>
-                    <span class="font-bold"
-                      >Technical Liaison & Risk Mitigation:</span
-                    >
-                    Identified and triaged 75+ feature gaps and defects.
-                    Orchestrated engineering and QA workflows to remediate
-                    blockers, preventing significant launch delays.
-                  </li>
-                  <li>
-                    <span class="font-bold">Agile Process Optimization:</span>
-                    Increased sprint completion rates by 8% by establishing
-                    standardized Story Point benchmarks and Definition of Done
-                    (DoD) criteria in collaboration with PMO leads.
-                  </li>
-                  <li>
-                    <span class="font-bold">Cross-Functional Delivery:</span>
-                    Partnered with backend and infrastructure teams to manage
-                    two critical AEM service pack upgrades. Led risk assessment
-                    and deployment planning to ensure zero-downtime releases.
-                  </li>
-                  <li>
-                    <span class="font-bold">Backlog Governance:</span>
-                    Maintained a prioritized Jira backlog, ensuring tasks
-                    reflected technical dependencies and business value while
-                    documenting platform best practices for long-term
-                    continuity.
-                  </li>
-                </ul>
-
-                <p class="mt-4 text-base font-bold text-primary">
-                  <strong>The Impact</strong>
-                </p>
-                <ul class="list-disc pl-6">
-                  <li>
-                    <span class="font-bold">Launch Readiness:</span>
-                    Successfully transitioned a third-party build into a stable,
-                    enterprise-ready platform.
-                  </li>
-                  <li>
-                    <span class="font-bold">Team Velocity:</span> Reduced scope
-                    ambiguity through improved grooming and requirements
-                    gathering, leading to more predictable delivery cycles.
-                  </li>
-                </ul>
-              </div>
-            </article>
-            <!-- MRM -->
-            <article
-              class="project-card mx-auto flex flex-col pt-16 lg:flex-row"
-            >
-              <!-- Image Section -->
-              <div class="w-full lg:w-1/2">
-                <figure class="lg:sticky lg:top-24">
-                  <img
-                    class="lazy-load aspect-[16/9] min-w-full rounded-2xl"
-                    src="./assets/images/lazyload.jpg"
-                    data-image="./assets/images/project-images/nescafe-dolce-gusto.jpg"
-                    alt="Nescafé Dolce Gusto product marketing site"
-                  />
-                </figure>
-              </div>
-
-              <!-- Content Section -->
-              <div class="pt-8 lg:w-1/2 lg:px-8 lg:pt-0">
-                <h3 class="text-2xl text-primary lg:text-3xl">
-                  MRM (McCann Worldgroup)
-                </h3>
-                <p class="font-bold">
-                  Web Developer & Technical Project Coordinator
-                </p>
-                <p class="mt-4 text-base">
-                  <span class="font-bold text-primary">The Challenge</span
-                  ><br />
-                  Supported the delivery and localization of enterprise digital
-                  platforms for Fortune 500 clients. Navigated the complexities
-                  of simultaneous launches across international markets,
-                  balancing technical execution with high-touch client
-                  relationship management.
-                </p>
-                <p class="mt-4 text-base font-bold text-primary">
-                  Strategic Coordination & Advisory
-                </p>
-                <ul class="list-disc pl-6">
-                  <li>
-                    <span class="font-bold">Stakeholder Liaison & Demos:</span>
-                    Acted as a technical face of the project for global clients;
-                    led product demonstrations and UAT sessions to validate that
-                    new functionality met business requirements.
-                  </li>
-                  <li>
-                    <span class="font-bold">Technical Advisory:</span>
-                    Collaborated with clients to identify design risks and
-                    assess the impact of requirement changes, ensuring that
-                    technical constraints were understood and accounted for in
-                    the project roadmap.
-                  </li>
-                  <li>
-                    <span class="font-bold"
-                      >Technical Documentation & Enablement:</span
-                    >
-                    Authored a comprehensive library for 50+ custom AEM
-                    components, reducing recurring support tickets by 20% and
-                    accelerating onboarding for cross-functional teams.
-                  </li>
-                  <li>
-                    <span class="font-bold">Delivery Governance:</span>
-                    Partnered with Project Managers to manage dependencies and
-                    risk across both Agile and Waterfall environments, ensuring
-                    all tickets were properly scoped for QA/UAT cycles.
-                  </li>
-                </ul>
-                <p class="mt-4 text-base font-bold text-primary">
-                  <strong>The Impact</strong>
-                </p>
-                <ul class="list-disc pl-6">
-                  <li>
-                    <span class="font-bold">Client Alignment:</span> Maintained
-                    high stakeholder trust by providing transparent technical
-                    feedback on design fidelity and accessibility compliance.
-                  </li>
-                  <li>
-                    <span class="font-bold">Risk Mitigation:</span> Proactively
-                    identified and tracked defects during the development
-                    lifecycle, preventing late-stage deployment issues across
-                    diverse global environments.
-                  </li>
-                </ul>
-              </div>
-            </article>
-            <!-- MacSales -->
-            <article
-              class="project-card mx-auto flex flex-col pt-16 lg:flex-row"
-            >
-              <!-- Image Section -->
-              <div class="w-full lg:w-1/2">
-                <figure class="lg:sticky lg:top-24">
-                  <img
-                    class="lazy-load aspect-[16/9] min-w-full rounded-2xl"
-                    src="./assets/images/lazyload.jpg"
-                    data-image="./assets/images/project-images/macsales.jpg"
-                    alt="MacSales.com, SSD product image"
-                  />
-                </figure>
-              </div>
-
-              <!-- Content Section -->
-              <div class="pt-8 lg:w-1/2 lg:px-8 lg:pt-0">
-                <h3 class="text-2xl text-primary lg:text-3xl">MacSales.com</h3>
-                <p class="font-bold">
-                  IT Project Lead & Lead Frontend Developer
-                </p>
-                <p class="mt-4 text-base">
-                  <span class="font-bold text-primary">The Challenge</span
-                  ><br />
-                  Led the end-to-end redevelopment of the flagship e-commerce
-                  platform. The legacy site lacked a mobile-responsive
-                  framework, creating a significant barrier to conversion. I
-                  stepped into a dual Technical Lead and IT Project Management
-                  role to drive a "mobile-first" modernization strategy in the
-                  absence of a dedicated PM.
-                </p>
-                <p class="mt-4 text-base font-bold text-primary">
-                  Strategic Leadership & Execution
-                </p>
-                <ul class="list-disc pl-6">
-                  <li>
-                    <span class="font-bold"
-                      >Market Opportunity Identification:</span
-                    >
-                    Recognized the lack of mobile accessibility as the primary
-                    driver of lost revenue; prioritized a mobile-first
-                    redevelopment to capture this untapped segment.
-                  </li>
-                  <li>
-                    <span class="font-bold"
-                      >Release & Infrastructure Coordination:</span
-                    >
-                    Partnered with IT and Backend Engineering to architect a
-                    stable server environment and established a rigorous Release
-                    Schedule that ensured zero-downtime during the platform
-                    transition.
-                  </li>
-                  <li>
-                    <span class="font-bold">Budget & Resource Management:</span>
-                    Orchestrated an internal frontend team and external
-                    contractors, managing high-stakes deliverables within a
-                    $300K+ annual budget.
-                  </li>
-                  <li>
-                    <span class="font-bold">Requirements Translation:</span>
-                    Transformed stakeholder visions into 200+ actionable
-                    development tickets, establishing "Definition of Done"
-                    standards that bridged the gap between business owners and
-                    engineering.
-                  </li>
-                  <li>
-                    <span class="font-bold">Cross-Functional Governance:</span>
-                    Acted as a central coordination point for Marketing, Sales,
-                    IT, and Engineering to synchronize release plans and
-                    mitigate deployment risks
-                  </li>
-                </ul>
-                <p class="mt-4 text-base font-bold text-primary">
-                  <strong>The Impact</strong>
-                </p>
-                <ul class="list-disc pl-6">
-                  <li>
-                    <span class="font-bold">Mobile Revenue Surge:</span>
-                    Successfully transitioned the platform from non-responsive
-                    to mobile-first, resulting in a 76% increase in mobile
-                    conversion rates.
-                  </li>
-                  <li>
-                    <span class="font-bold">Performance Gains:</span> Delivered
-                    a 15% improvement in page load performance, directly
-                    enhancing SEO and user retention.
-                  </li>
-                  <li>
-                    <span class="font-bold">Operational Stability:</span>
-                    Established QA/UAT practices and server standards that
-                    reduced deployment errors and improved long-term platform
-                    reliability.
-                  </li>
-                </ul>
-              </div>
-            </article>
-
-            <!-- ESC 13 -->
-            <article
-              class="project-card mx-auto flex flex-col pt-16 lg:flex-row"
-            >
-              <!-- Image Section -->
-              <div class="w-full lg:w-1/2">
-                <figure class="lg:sticky lg:top-24">
-                  <img
-                    class="lazy-load aspect-[16/9] min-w-full rounded-2xl"
-                    src="./assets/images/lazyload.jpg"
-                    data-image="./assets/images/project-images/esc13.jpg"
-                    alt="Education Service Center Region 13, image of student ready to learn"
-                  />
-                </figure>
-              </div>
-
-              <!-- Content Section -->
-              <div class="pt-8 lg:w-1/2 lg:px-8 lg:pt-0">
-                <h3 class="text-2xl text-primary lg:text-3xl">
-                  Education Service Center Region 13 (ESC 13)
-                </h3>
-                <p class="font-bold">
-                  Technical Project Lead & Web Administrator
-                </p>
-                <p class="mt-4 text-base">
-                  <span class="font-bold text-primary">The Challenge</span
-                  ><br />
-                  Served as the sole Technical Lead and IT Project Manager for
-                  the ESC's digital ecosystem. In the absence of a dedicated PM,
-                  I managed the full lifecycle of 3–4 concurrent information
-                  systems and websites.
-                </p>
-                <p class="mt-4 text-base font-bold text-primary">
-                  Strategic Leadership & Execution
-                </p>
-                <ul class="list-disc pl-6">
-                  <li>
-                    <span class="font-bold">Multi-Project Orchestration:</span>
-                    Directed the end-to-end delivery of multiple simultaneous
-                    workstreams, from initial scoping and funding alignment to
-                    final deployment and support.
-                  </li>
-                  <li>
-                    <span class="font-bold"
-                      >Compliance & Grant Management:</span
-                    >
-                    Translated complex state grant requirements and compliance
-                    mandates into prioritized development backlogs, ensuring
-                    100% adherence to strict funding obligations.
-                  </li>
-                  <li>
-                    <span class="font-bold">Stakeholder Alignment:</span> Acted
-                    as the primary liaison for department leaders and
-                    stakeholders, bridging the gap between high-level
-                    educational goals and technical implementation.
-                  </li>
-                  <li>
-                    <span class="font-bold">Risk & Resource Management:</span>
-                    Managed project timelines and delivery risks across
-                    competing priorities, ensuring security and accessibility
-                    standards were met for public-facing education portals.
-                  </li>
-                </ul>
-                <p class="mt-4 text-base font-bold text-primary">
-                  <strong>The Impact</strong>
-                </p>
-                <ul class="list-disc pl-6">
-                  <li>
-                    <span class="font-bold">Stakeholder Satisfaction:</span>
-                    Maintained a 90%+ satisfaction rate across diverse
-                    stakeholders through transparent communication and reliable
-                    delivery.
-                  </li>
-                  <li>
-                    <span class="font-bold">Operational Enablement:</span>
-                    Developed a comprehensive training program and reusable "job
-                    aids" for CMS users, significantly increasing platform
-                    adoption and reducing ongoing support requests.
-                  </li>
-                  <li>
-                    <span class="font-bold">Scalable Education Solutions:</span>
-                    Successfully delivered compliant, secure, and user-friendly
-                    digital tools that empowered educators and administrators
-                    across the Central Texas region.
-                  </li>
-                </ul>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <!-- About -->
-      <div
-        class="-mb-px mt-36 bg-footer-trees bg-contain bg-bottom bg-repeat-x"
-      >
-        <section
-          id="about"
-          class="container mx-auto mt-28 max-w-lg px-8 lg:mt-36 lg:px-16"
-        >
-          <div class="mx-auto w-full lg:w-2/3" aria-labelledby="about-heading">
-            <h2
-              id="about-heading"
-              class="text-3xl text-primary md:text-4xl lg:text-5xl"
-            >
-              About Me
-            </h2>
-            <h3 class="pt-4 text-2xl text-primary">
-              The Bridge Between Code and Strategy
-            </h3>
-            <p class="mt-4">
-              With over a decade of experience in the digital space, my career
-              has been defined by a natural evolution from building interfaces
-              to leading the teams and strategies behind them. I’ve found my
-              "sweet spot" at the intersection of technical precision and
-              project governance. Whether I’m stepping into a leadership gap for
-              a new state agency or stabilizing a global enterprise platform, I
-              thrive on turning technical complexity into clear, actionable
-              roadmaps.
-            </p>
-
-            <h3 class="pt-4 text-2xl text-primary">
-              Leadership with a Human Focus
-            </h3>
-            <p class="mt-4">
-              I believe great project management is as much about people as it
-              is about processes. To me, being a "good leader" means more than
-              just hitting a deadline; it means empowering my team, removing
-              their blockers, and fostering an environment of transparency and
-              accountability. I take pride in being a "Technical PM" who speaks
-              the language of developers, allowing me to build deep trust with
-              engineering teams while ensuring business stakeholders see
-              measurable results.
-            </p>
-
-            <h3 class="pt-4 text-2xl text-primary">Beyond the Backlog</h3>
-            <p class="mt-4">
-              When I’m not refining a Jira board or coordinating a release, I’m
-              usually looking for ways to stay ahead of the curve. I’m a
-              constant student of the industry—regularly diving into project
-              management podcasts, exploring the latest in AI, and tracking
-              product innovation trends to see how they can be applied to my
-              next project.
-            </p>
-            <p class="mt-4">
-              Outside of work, I stay active and grounded in my community.
-              You’ll often find me:
-            </p>
-            <ul class="list-disc pl-6">
-              <li>
-                Spending time with family & friends, which keeps me balanced and
-                motivated.
-              </li>
-              <li>
-                Biking around Austin or volunteering at the Texas Showdown,
-                helping coordinate bike camping races across the state.
-              </li>
-              <li>
-                Restoring my classic truck, a long-term project that satisfies
-                my love for hands-on problem solving.
-              </li>
-            </ul>
-          </div>
-        </section>
+  <div class="flex bg-top bg-repeat-x bg-cover bg-hero-mobile md:bg-hero">
+    <header class="flex flex-col items-center max-w-xl px-8 pb-24 mx-auto pt-44 md:flex-row md:py-40 lg:px-16">
+      <div class="sm:basis-auto md:basis-1/4">
+        <img class="w-40 md:w-auto" src="./assets/images/site/john-hoysa-hero.png" alt="Image of John Hoysa" />
       </div>
-    </main>
+      <h1
+        class="mt-8 basis-3/4 font-primary text-hero-mobile text-primary md:ml-16 md:mt-0 md:text-hero-tablet lg:text-hero-desktop xl:text-hero-desktop-xl">
+        Technical Project Manager. Bridging the gap between complex
+        engineering and strategic execution to deliver high-impact digital
+        products.
+      </h1>
+    </header>
+  </div>
 
-    <footer class="bg-black pt-20">
-      <div
-        class="mx-auto mt-36 grid max-w-lg grid-cols-6 gap-6 px-8 pb-8 lg:px-16"
-      >
-        <section class="col-span-6 lg:col-span-3">
-          <h2 class="text-5xl text-primary">Ready to build something great?</h2>
+  <main id="main-content" class="mt-28 lg:mt-36">
+    <!-- Skills -->
+    <section id="skills" class="container max-w-lg px-8 mx-auto lg:px-16">
+      <div class="max-w-lg px-4 pb-4 rounded-2xl bg-dirt-400 pt-14 lg:pt-28" aria-labelledby="skills-heading">
+        <div class="animate-heading">
+          <h2 id="skills-heading" class="pl-4 text-3xl text-primary md:text-4xl lg:pl-4 lg:text-5xl">
+            Key Skills
+          </h2>
+          <p class="pt-4 pl-4 lg:w-1/2">
+            I combine technical expertise with strategic project leadership to
+            deliver initiatives that align stakeholders, empower teams, and
+            drive measurable business outcomes.
+          </p>
+        </div>
+        <div class="grid grid-cols-1 gap-10 px-10 mt-6 rounded-2xl bg-dirt-300 lg:mt-8 lg:grid-cols-3">
+          <article class="py-4 animate-skill lg:py-9">
+            <object class="fill-primary lg:block" data="./assets/images/icons/pm.svg" width="48" height="48"
+              aria-hidden="true"></object>
+            <h3 class="mt-4 text-2xl text-primary lg:block">
+              Project & Program Management
+            </h3>
+            <p class="mt-4 text-sm lg:text-base">
+              I lead the end-to-end SDLC using Agile, Scrum, and Waterfall
+              methodologies. My focus is on rigorous scope management, budget
+              oversight ($300K+), and stakeholder alignment to ensure
+              high-stakes initiatives are delivered on schedule and within
+              budget.
+            </p>
+          </article>
+
+          <article class="py-4 animate-skill lg:py-9">
+            <object class="fill-primary lg:block" data="./assets/images/icons/development.svg" width="48" height="48"
+              aria-hidden="true"></object>
+            <h3 class="mt-4 text-2xl text-primary lg:block">
+              Technical Leadership
+            </h3>
+
+            <p class="mt-4 text-sm lg:text-base">
+              I bridge the gap between business vision and engineering
+              execution. Drawing on 10+ years of frontend experience, I
+              translate complex requirements into actionable technical
+              roadmaps, manage vendor relationships, and lead cross-functional
+              teams toward high-fidelity digital products.
+            </p>
+          </article>
+
+          <article class="py-4 animate-skill lg:py-9">
+            <object class="fill-primary lg:block" data="./assets/images/icons/ux.svg" width="48" height="48"
+              aria-hidden="true"></object>
+            <h3 class="mt-4 text-2xl text-primary lg:block">
+              Process & Operations
+            </h3>
+
+            <p class="mt-4 text-sm lg:text-base">
+              I specialize in operational efficiency, optimizing delivery
+              pipelines, establishing "Definition of Done" standards, and
+              creating comprehensive documentation. I focus on reducing
+              technical debt and streamlining workflows to increase team
+              velocity and ensure long-term platform stability.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="container max-w-lg px-8 mx-auto mt-28 lg:mt-36 lg:px-16">
+      <div aria-labelledby="projects-heading">
+        <div class="animate-heading">
+          <h2 id="projects-heading" class="text-3xl text-primary md:text-4xl lg:text-5xl">
+            Project Highlights
+          </h2>
+          <p class="mt-4 text-xl lg:w-1/2">
+            Strategic leadership and technical execution for enterprise,
+            government, and education.
+          </p>
+        </div>
+        <div class="">
+          <!-- Space Commission -->
+          <article class="flex flex-col pt-8 mx-auto project-card lg:flex-row">
+            <!-- Image Section -->
+            <div class="w-full lg:w-1/2">
+              <figure class="lg:sticky lg:top-24">
+                <img class="lazy-load aspect-[16/9] min-w-full rounded-2xl" src="./assets/images/lazyload.jpg"
+                  data-image="./assets/images/project-images/tsc.jpg" alt="Texas Space Commission website" />
+              </figure>
+            </div>
+
+            <!-- Content Section -->
+            <div class="pt-8 lg:w-1/2 lg:px-8 lg:pt-0">
+              <h3 class="text-2xl text-primary lg:text-3xl">
+                Texas Space Commission
+              </h3>
+              <p class="font-bold">
+                Technical Project Manager & Lead Developer
+              </p>
+              <p class="mt-4 text-base">
+                <span class="font-bold text-primary">The Challenge</span><br />
+                Led the Project Initiation and digital launch of a
+                high-profile state agency following a gap in departmental
+                leadership. Stepping in at the project's inception, I was
+                tasked with architecting the digital foundation from the
+                ground up and establishing a professional web presence for the
+                new state entity with urgency.
+              </p>
+              <p class="mt-4 text-base font-bold text-primary">
+                Strategic Leadership & Execution
+              </p>
+              <ul class="pl-6 list-disc">
+                <li>
+                  <span class="font-bold">Project Initiation & Foundations:</span>
+                  Directed the project from "Day Zero," defining the technical
+                  roadmap and establishing the governance necessary to launch
+                  a new state agency without an existing blueprint.
+                </li>
+                <li>
+                  <span class="font-bold">Rapid Deployment Strategy:</span>
+                  Focused on high-velocity execution to move from concept to
+                  launch quickly, ensuring the agency had a functional,
+                  secure, and compliant digital presence to support its
+                  legislative mission.
+                </li>
+                <li>
+                  <span class="font-bold">Full-Lifecycle Governance:</span>
+                  Served as the central point of contact for the Governor’s
+                  office (DIR) and IT leadership, managing all
+                  cross-functional communication and technical requirements.
+                </li>
+                <li>
+                  <span class="font-bold">Agile Orchestration:</span> Directed
+                  the design and development pods through iterative cycles,
+                  prioritizing an MVP that met 100% of state compliance and
+                  security standards while maintaining high design fidelity.
+                </li>
+              </ul>
+
+              <p class="mt-4 text-base font-bold text-primary">
+                <strong>The Impact</strong>
+              </p>
+              <ul class="pl-6 list-disc">
+                <li>
+                  <span class="font-bold">Successful Agency Inauguration:</span>
+                  Delivered a stable, foundational digital infrastructure that
+                  provided the agency with immediate credibility and
+                  public-facing utility.
+                </li>
+                <li>
+                  <span class="font-bold">Regulatory Compliance:</span>
+                  Achieved 100% adherence to Texas DIR and accessibility
+                  mandates (WCAG 2.1), establishing a secure and scalable
+                  platform for future agency growth.
+                </li>
+                <li>
+                  <span class="font-bold">Operational Continuity:</span>
+                  Successfully bridged a critical leadership gap, providing
+                  the technical and project oversight required to move the
+                  project from a standstill to a successful launch.
+                </li>
+              </ul>
+            </div>
+          </article>
+          <!-- Expedia Group -->
+          <article class="flex flex-col pt-16 mx-auto project-card lg:flex-row">
+            <!-- Image Section -->
+            <div class="w-full lg:w-1/2">
+              <figure class="lg:sticky lg:top-24">
+                <img class="lazy-load aspect-[16/9] min-w-full rounded-2xl" src="./assets/images/lazyload.jpg"
+                  data-image="./assets/images/project-images/expedia.jpg" alt="Expedia Group Image of hotel pool" />
+              </figure>
+            </div>
+
+            <!-- Content Section -->
+            <div class="pt-8 lg:w-1/2 lg:px-8 lg:pt-0">
+              <h3 class="text-2xl text-primary lg:text-3xl">
+                Expedia Group (B2B Partner and Escapia Platforms)
+              </h3>
+              <p class="font-bold">
+                Software Engineer II & Technical Project Lead
+              </p>
+              <p class="mt-4 text-base">
+                <span class="font-bold text-primary">The Challenge</span><br />
+                Assumed frontend ownership of a high-traffic B2B platform
+                following a third-party agency hand-off. Tasked with
+                stabilizing the codebase, closing critical feature gaps, and
+                scaling the platform for 10,000+ global travel partners.
+              </p>
+              <p class="mt-4 text-base font-bold text-primary">
+                Strategic Execution & Delivery
+              </p>
+              <ul class="pl-6 list-disc">
+                <li>
+                  <span class="font-bold">Technical Liaison & Risk Mitigation:</span>
+                  Identified and triaged 75+ feature gaps and defects.
+                  Orchestrated engineering and QA workflows to remediate
+                  blockers, preventing significant launch delays.
+                </li>
+                <li>
+                  <span class="font-bold">Agile Process Optimization:</span>
+                  Increased sprint completion rates by 8% by establishing
+                  standardized Story Point benchmarks and Definition of Done
+                  (DoD) criteria in collaboration with PMO leads.
+                </li>
+                <li>
+                  <span class="font-bold">Cross-Functional Delivery:</span>
+                  Partnered with backend and infrastructure teams to manage
+                  two critical AEM service pack upgrades. Led risk assessment
+                  and deployment planning to ensure zero-downtime releases.
+                </li>
+                <li>
+                  <span class="font-bold">Backlog Governance:</span>
+                  Maintained a prioritized Jira backlog, ensuring tasks
+                  reflected technical dependencies and business value while
+                  documenting platform best practices for long-term
+                  continuity.
+                </li>
+              </ul>
+
+              <p class="mt-4 text-base font-bold text-primary">
+                <strong>The Impact</strong>
+              </p>
+              <ul class="pl-6 list-disc">
+                <li>
+                  <span class="font-bold">Launch Readiness:</span>
+                  Successfully transitioned a third-party build into a stable,
+                  enterprise-ready platform.
+                </li>
+                <li>
+                  <span class="font-bold">Team Velocity:</span> Reduced scope
+                  ambiguity through improved grooming and requirements
+                  gathering, leading to more predictable delivery cycles.
+                </li>
+              </ul>
+            </div>
+          </article>
+          <!-- MRM -->
+          <article class="flex flex-col pt-16 mx-auto project-card lg:flex-row">
+            <!-- Image Section -->
+            <div class="w-full lg:w-1/2">
+              <figure class="lg:sticky lg:top-24">
+                <img class="lazy-load aspect-[16/9] min-w-full rounded-2xl" src="./assets/images/lazyload.jpg"
+                  data-image="./assets/images/project-images/nescafe-dolce-gusto.jpg"
+                  alt="Nescafé Dolce Gusto product marketing site" />
+              </figure>
+            </div>
+
+            <!-- Content Section -->
+            <div class="pt-8 lg:w-1/2 lg:px-8 lg:pt-0">
+              <h3 class="text-2xl text-primary lg:text-3xl">
+                MRM (McCann Worldgroup)
+              </h3>
+              <p class="font-bold">
+                Web Developer & Technical Project Coordinator
+              </p>
+              <p class="mt-4 text-base">
+                <span class="font-bold text-primary">The Challenge</span><br />
+                Supported the delivery and localization of enterprise digital
+                platforms for Fortune 500 clients. Navigated the complexities
+                of simultaneous launches across international markets,
+                balancing technical execution with high-touch client
+                relationship management.
+              </p>
+              <p class="mt-4 text-base font-bold text-primary">
+                Strategic Coordination & Advisory
+              </p>
+              <ul class="pl-6 list-disc">
+                <li>
+                  <span class="font-bold">Stakeholder Liaison & Demos:</span>
+                  Acted as a technical face of the project for global clients;
+                  led product demonstrations and UAT sessions to validate that
+                  new functionality met business requirements.
+                </li>
+                <li>
+                  <span class="font-bold">Technical Advisory:</span>
+                  Collaborated with clients to identify design risks and
+                  assess the impact of requirement changes, ensuring that
+                  technical constraints were understood and accounted for in
+                  the project roadmap.
+                </li>
+                <li>
+                  <span class="font-bold">Technical Documentation & Enablement:</span>
+                  Authored a comprehensive library for 50+ custom AEM
+                  components, reducing recurring support tickets by 20% and
+                  accelerating onboarding for cross-functional teams.
+                </li>
+                <li>
+                  <span class="font-bold">Delivery Governance:</span>
+                  Partnered with Project Managers to manage dependencies and
+                  risk across both Agile and Waterfall environments, ensuring
+                  all tickets were properly scoped for QA/UAT cycles.
+                </li>
+              </ul>
+              <p class="mt-4 text-base font-bold text-primary">
+                <strong>The Impact</strong>
+              </p>
+              <ul class="pl-6 list-disc">
+                <li>
+                  <span class="font-bold">Client Alignment:</span> Maintained
+                  high stakeholder trust by providing transparent technical
+                  feedback on design fidelity and accessibility compliance.
+                </li>
+                <li>
+                  <span class="font-bold">Risk Mitigation:</span> Proactively
+                  identified and tracked defects during the development
+                  lifecycle, preventing late-stage deployment issues across
+                  diverse global environments.
+                </li>
+              </ul>
+            </div>
+          </article>
+          <!-- MacSales -->
+          <article class="flex flex-col pt-16 mx-auto project-card lg:flex-row">
+            <!-- Image Section -->
+            <div class="w-full lg:w-1/2">
+              <figure class="lg:sticky lg:top-24">
+                <img class="lazy-load aspect-[16/9] min-w-full rounded-2xl" src="./assets/images/lazyload.jpg"
+                  data-image="./assets/images/project-images/macsales.jpg" alt="MacSales.com, SSD product image" />
+              </figure>
+            </div>
+
+            <!-- Content Section -->
+            <div class="pt-8 lg:w-1/2 lg:px-8 lg:pt-0">
+              <h3 class="text-2xl text-primary lg:text-3xl">MacSales.com</h3>
+              <p class="font-bold">
+                IT Project Lead & Lead Frontend Developer
+              </p>
+              <p class="mt-4 text-base">
+                <span class="font-bold text-primary">The Challenge</span><br />
+                Led the end-to-end redevelopment of the flagship e-commerce
+                platform. The legacy site lacked a mobile-responsive
+                framework, creating a significant barrier to conversion. I
+                stepped into a dual Technical Lead and IT Project Management
+                role to drive a "mobile-first" modernization strategy in the
+                absence of a dedicated PM.
+              </p>
+              <p class="mt-4 text-base font-bold text-primary">
+                Strategic Leadership & Execution
+              </p>
+              <ul class="pl-6 list-disc">
+                <li>
+                  <span class="font-bold">Market Opportunity Identification:</span>
+                  Recognized the lack of mobile accessibility as the primary
+                  driver of lost revenue; prioritized a mobile-first
+                  redevelopment to capture this untapped segment.
+                </li>
+                <li>
+                  <span class="font-bold">Release & Infrastructure Coordination:</span>
+                  Partnered with IT and Backend Engineering to architect a
+                  stable server environment and established a rigorous Release
+                  Schedule that ensured zero-downtime during the platform
+                  transition.
+                </li>
+                <li>
+                  <span class="font-bold">Budget & Resource Management:</span>
+                  Orchestrated an internal frontend team and external
+                  contractors, managing high-stakes deliverables within a
+                  $300K+ annual budget.
+                </li>
+                <li>
+                  <span class="font-bold">Requirements Translation:</span>
+                  Transformed stakeholder visions into 200+ actionable
+                  development tickets, establishing "Definition of Done"
+                  standards that bridged the gap between business owners and
+                  engineering.
+                </li>
+                <li>
+                  <span class="font-bold">Cross-Functional Governance:</span>
+                  Acted as a central coordination point for Marketing, Sales,
+                  IT, and Engineering to synchronize release plans and
+                  mitigate deployment risks
+                </li>
+              </ul>
+              <p class="mt-4 text-base font-bold text-primary">
+                <strong>The Impact</strong>
+              </p>
+              <ul class="pl-6 list-disc">
+                <li>
+                  <span class="font-bold">Mobile Revenue Surge:</span>
+                  Successfully transitioned the platform from non-responsive
+                  to mobile-first, resulting in a 76% increase in mobile
+                  conversion rates.
+                </li>
+                <li>
+                  <span class="font-bold">Performance Gains:</span> Delivered
+                  a 15% improvement in page load performance, directly
+                  enhancing SEO and user retention.
+                </li>
+                <li>
+                  <span class="font-bold">Operational Stability:</span>
+                  Established QA/UAT practices and server standards that
+                  reduced deployment errors and improved long-term platform
+                  reliability.
+                </li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- ESC 13 -->
+          <article class="flex flex-col pt-16 mx-auto project-card lg:flex-row">
+            <!-- Image Section -->
+            <div class="w-full lg:w-1/2">
+              <figure class="lg:sticky lg:top-24">
+                <img class="lazy-load aspect-[16/9] min-w-full rounded-2xl" src="./assets/images/lazyload.jpg"
+                  data-image="./assets/images/project-images/esc13.jpg"
+                  alt="Education Service Center Region 13, image of student ready to learn" />
+              </figure>
+            </div>
+
+            <!-- Content Section -->
+            <div class="pt-8 lg:w-1/2 lg:px-8 lg:pt-0">
+              <h3 class="text-2xl text-primary lg:text-3xl">
+                Education Service Center Region 13 (ESC 13)
+              </h3>
+              <p class="font-bold">
+                Technical Project Lead & Web Administrator
+              </p>
+              <p class="mt-4 text-base">
+                <span class="font-bold text-primary">The Challenge</span><br />
+                Served as the sole Technical Lead and IT Project Manager for
+                the ESC's digital ecosystem. In the absence of a dedicated PM,
+                I managed the full lifecycle of 3–4 concurrent information
+                systems and websites.
+              </p>
+              <p class="mt-4 text-base font-bold text-primary">
+                Strategic Leadership & Execution
+              </p>
+              <ul class="pl-6 list-disc">
+                <li>
+                  <span class="font-bold">Multi-Project Orchestration:</span>
+                  Directed the end-to-end delivery of multiple simultaneous
+                  workstreams, from initial scoping and funding alignment to
+                  final deployment and support.
+                </li>
+                <li>
+                  <span class="font-bold">Compliance & Grant Management:</span>
+                  Translated complex state grant requirements and compliance
+                  mandates into prioritized development backlogs, ensuring
+                  100% adherence to strict funding obligations.
+                </li>
+                <li>
+                  <span class="font-bold">Stakeholder Alignment:</span> Acted
+                  as the primary liaison for department leaders and
+                  stakeholders, bridging the gap between high-level
+                  educational goals and technical implementation.
+                </li>
+                <li>
+                  <span class="font-bold">Risk & Resource Management:</span>
+                  Managed project timelines and delivery risks across
+                  competing priorities, ensuring security and accessibility
+                  standards were met for public-facing education portals.
+                </li>
+              </ul>
+              <p class="mt-4 text-base font-bold text-primary">
+                <strong>The Impact</strong>
+              </p>
+              <ul class="pl-6 list-disc">
+                <li>
+                  <span class="font-bold">Stakeholder Satisfaction:</span>
+                  Maintained a 90%+ satisfaction rate across diverse
+                  stakeholders through transparent communication and reliable
+                  delivery.
+                </li>
+                <li>
+                  <span class="font-bold">Operational Enablement:</span>
+                  Developed a comprehensive training program and reusable "job
+                  aids" for CMS users, significantly increasing platform
+                  adoption and reducing ongoing support requests.
+                </li>
+                <li>
+                  <span class="font-bold">Scalable Education Solutions:</span>
+                  Successfully delivered compliant, secure, and user-friendly
+                  digital tools that empowered educators and administrators
+                  across the Central Texas region.
+                </li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <div class="-mb-px bg-bottom bg-repeat-x bg-contain mt-36 bg-footer-trees">
+      <section id="about" class="container max-w-lg px-8 mx-auto mt-28 lg:mt-36 lg:px-16">
+        <div class="w-full mx-auto lg:w-2/3" aria-labelledby="about-heading">
+          <h2 id="about-heading" class="text-3xl text-primary md:text-4xl lg:text-5xl">
+            About Me
+          </h2>
+          <h3 class="pt-4 text-2xl text-primary">
+            The Bridge Between Code and Strategy
+          </h3>
           <p class="mt-4">
-            Whether you need a lead for a complex enterprise launch or a
-            technical PM to stabilize a high-stakes project, my inbox is always
-            open.
+            With over a decade of experience in the digital space, my career
+            has been defined by a natural evolution from building interfaces
+            to leading the teams and strategies behind them. I’ve found my
+            "sweet spot" at the intersection of technical precision and
+            project governance. Whether I’m stepping into a leadership gap for
+            a new state agency or stabilizing a global enterprise platform, I
+            thrive on turning technical complexity into clear, actionable
+            roadmaps.
           </p>
 
-          <address class="not-italic">
-            <a
-              class="group mt-8 flex text-2xl"
-              href="mailto:johnhoysa@gmail.com?subject=Ready to work together!"
-            >
-              Send me an email
-              <img
-                class="ml-2 fill-primary group-hover:animate-pulse"
-                src="./assets/images/icons/arrow.svg"
-                alt=""
-                width="24"
-                height="24"
-                aria-hidden="true"
-              />
-            </a>
-          </address>
-        </section>
+          <h3 class="pt-4 text-2xl text-primary">
+            Leadership with a Human Focus
+          </h3>
+          <p class="mt-4">
+            I believe great project management is as much about people as it
+            is about processes. To me, being a "good leader" means more than
+            just hitting a deadline; it means empowering my team, removing
+            their blockers, and fostering an environment of transparency and
+            accountability. I take pride in being a "Technical PM" who speaks
+            the language of developers, allowing me to build deep trust with
+            engineering teams while ensuring business stakeholders see
+            measurable results.
+          </p>
 
-        <section
-          class="col-span-6 mt-16 flex flex-col lg:col-span-3 lg:place-items-end lg:items-end lg:justify-end"
-        >
-          <img
-            src="./assets/images/site/john-hoysa-logo.svg"
-            alt="John Hoysa logo"
-            width="152"
-            height="32"
-          />
-          <ul
-            id="navSocialFooter"
-            class="mb-2 mt-6 flex items-center gap-3 md:hidden"
-          >
-            <li
-              class="flex h-8 w-8 items-center justify-center rounded-full p-2"
-            >
-              <a
-                href="https://www.linkedin.com/in/johnhoysa"
-                aria-label="LinkedIn profile"
-              >
-                <img
-                  src="./assets/images/icons/linkedin.svg"
-                  alt=""
-                  aria-hidden="true"
-                  width="24"
-                  height="24"
-                />
-              </a>
+          <h3 class="pt-4 text-2xl text-primary">Beyond the Backlog</h3>
+          <p class="mt-4">
+            When I’m not refining a Jira board or coordinating a release, I’m
+            usually looking for ways to stay ahead of the curve. I’m a
+            constant student of the industry—regularly diving into project
+            management podcasts, exploring the latest in AI, and tracking
+            product innovation trends to see how they can be applied to my
+            next project.
+          </p>
+          <p class="mt-4">
+            Outside of work, I stay active and grounded in my community.
+            You’ll often find me:
+          </p>
+          <ul class="pl-6 list-disc">
+            <li>
+              Spending time with family & friends, which keeps me balanced and
+              motivated.
             </li>
-            <li
-              class="flex h-8 w-8 items-center justify-center rounded-full p-2"
-            >
-              <a
-                href="https://github.com/johnhoysa/"
-                aria-label="GitHub profile"
-              >
-                <img
-                  src="./assets/images/icons/github.svg"
-                  alt=""
-                  aria-hidden="true"
-                  width="24"
-                  height="24"
-                />
-              </a>
+            <li>
+              Biking around Austin or volunteering at the Texas Showdown,
+              helping coordinate bike camping races across the state.
             </li>
-            <li
-              class="flex h-8 w-8 items-center justify-center rounded-full p-2"
-            >
-              <a
-                href="mailto:johnhoysa@gmail.com?subject=Correspondence From Site"
-                aria-label="Email John Hoysa"
-              >
-                <img
-                  src="./assets/images/icons/email.svg"
-                  alt=""
-                  aria-hidden="true"
-                  width="24"
-                  height="24"
-              /></a>
+            <li>
+              Restoring my classic truck, a long-term project that satisfies
+              my love for hands-on problem solving.
             </li>
           </ul>
-        </section>
-      </div>
-    </footer>
-    <script src="./dist/js/index.js"></script>
-  </body>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="pt-20 bg-black">
+    <div class="grid max-w-lg grid-cols-6 gap-6 px-8 pb-8 mx-auto mt-36 lg:px-16">
+      <section class="col-span-6 lg:col-span-3">
+        <h2 class="text-5xl text-primary">Ready to build something great?</h2>
+        <p class="mt-4">
+          Whether you need a lead for a complex enterprise launch or a
+          technical PM to stabilize a high-stakes project, my inbox is always
+          open.
+        </p>
+
+        <address class="not-italic">
+          <a class="flex mt-8 text-2xl group" href="mailto:johnhoysa@gmail.com?subject=Ready to work together!">
+            Send me an email
+            <img class="ml-2 fill-primary group-hover:animate-pulse" src="./assets/images/icons/arrow.svg" alt=""
+              width="24" height="24" aria-hidden="true" />
+          </a>
+        </address>
+      </section>
+
+      <section class="flex flex-col col-span-6 mt-16 lg:col-span-3 lg:place-items-end lg:items-end lg:justify-end">
+        <img src="./assets/images/site/john-hoysa-logo.svg" alt="John Hoysa logo" width="152" height="32" />
+        <ul id="navSocialFooter" class="flex items-center gap-3 mt-6 mb-2 md:hidden">
+          <li class="flex items-center justify-center w-8 h-8 p-2 rounded-full">
+            <a href="https://www.linkedin.com/in/johnhoysa" aria-label="LinkedIn profile">
+              <img src="./assets/images/icons/linkedin.svg" alt="" aria-hidden="true" width="24" height="24" />
+            </a>
+          </li>
+          <li class="flex items-center justify-center w-8 h-8 p-2 rounded-full">
+            <a href="https://github.com/johnhoysa/" aria-label="GitHub profile">
+              <img src="./assets/images/icons/github.svg" alt="" aria-hidden="true" width="24" height="24" />
+            </a>
+          </li>
+          <li class="flex items-center justify-center w-8 h-8 p-2 rounded-full">
+            <a href="mailto:johnhoysa@gmail.com?subject=Correspondence From Site" aria-label="Email John Hoysa">
+              <img src="./assets/images/icons/email.svg" alt="" aria-hidden="true" width="24" height="24" /></a>
+          </li>
+        </ul>
+      </section>
+    </div>
+  </footer>
+  <script src="./dist/js/index.js"></script>
+</body>
+
 </html>
