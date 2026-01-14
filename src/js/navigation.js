@@ -7,9 +7,9 @@ function toggleHeaderClass() {
   }
 
   if (scrollPosition > scrolledPosition) {
-     nav.classList.add('backdrop-blur-xs', 'shadow-lg','bg-dirt/90');
+    nav.classList.add('backdrop-blur-xs', 'shadow-lg', 'bg-dirt/90');
   } else {
-     nav.classList.remove('backdrop-blur-xs', 'shadow-lg','bg-dirt/90');
+    nav.classList.remove('backdrop-blur-xs', 'shadow-lg', 'bg-dirt/90');
   }
 }
 // Listen for scroll events
