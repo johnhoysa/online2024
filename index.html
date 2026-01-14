@@ -21,7 +21,12 @@
 </head>
 
 <body class="static p-0 text-base text-white font-primary bg-dirt">
-  <nav id="navigation" class="fixed lg:px-16 px-8 py-4 md:-mt-16 -mt-[152px] w-full top-36 md:top-16 z-50">
+  <a href="#main-content"
+    class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:bg-black focus:text-white focus:px-4 focus:py-2">
+    Skip to main content
+  </a>
+  <nav id="navigation" aria-label="Main navigation"
+    class="fixed lg:px-16 px-8 py-4 md:-mt-16 -mt-[152px] w-full top-36 md:top-16 z-50">
     <div class="justify-between align-baseline block max-w-lg mx-auto md:flex">
       <div class="pt-2 min-w-20 md:pt-0">
 
@@ -47,18 +52,18 @@
       <ul id="navSocial"
         class="items-center hidden h-5 pt-1 mt-4 gap-4 md:mt-0 md:flex md:pt-2.5 md:justify-between z-50">
         <li class="rounded-full p-2 flex justify-center items-center w-8 h-8">
-          <a href="https://www.linkedin.com/in/johnhoysa">
-            <img src="./assets/images/icons/linkedin.svg" alt="LinkedIn" width="18px" height="18px" />
+          <a href="https://www.linkedin.com/in/johnhoysa" aria-label="LinkedIn profile">
+            <img src="./assets/images/icons/linkedin.svg" alt="" aria-hidden="true" width="18px" height="18px" />
           </a>
         </li>
         <li class="rounded-full p-2 flex justify-center items-center w-8 h-8">
-          <a href="https://github.com/johnhoysa/">
-            <img src="./assets/images/icons/github.svg" alt="GitHub" width="18px" height="18px" />
+          <a href="https://github.com/johnhoysa/" aria-label="GitHub profile">
+            <img src="./assets/images/icons/github.svg" alt="" aria-hidden="true" width="18px" height="18px" />
           </a>
         </li>
         <li class="rounded-full p-2 flex justify-center items-center w-8 h-8">
-          <a href="mailto:johnhoysa@gmail.com?subject=Correspondence From Site">
-            <img src="./assets/images/icons/email.svg" alt="email" width="18px" height="18px" /></a>
+          <a href="mailto:johnhoysa@gmail.com?subject=Correspondence From Site" aria-label="Email John Hoysa">
+            <img src="./assets/images/icons/email.svg" alt="" aria-hidden="true" width="18px" height="18px" /></a>
         </li>
       </ul>
     </div>
@@ -70,20 +75,20 @@
         <img class="w-40 md:w-auto" src="./assets/images/site/john-hoysa-hero.png" width="100%" height="auto"
           alt="Image of John Hoysa" />
       </div>
-      <h2
+      <h1
         class="mt-8 xl:text-hero-desktop-xl lg:text-hero-desktop md:text-hero-tablet text-hero-mobile font-primary basis-3/4 text-primary md:ml-16 md:mt-0">
         Technical Project Manager. Bridging the gap between complex engineering and strategic execution to deliver
         high-impact digital products.
-      </h2>
+      </h1>
     </header>
   </div>
 
-  <main class="lg:mt-36 mt-28">
+  <main id="main-content" class="lg:mt-36 mt-28">
     <!-- Skills -->
-    <div id="skills" class="container max-w-lg px-8 mx-auto lg:px-16">
-      <section class="max-w-lg px-4 pb-4 bg-dirt-400 lg:pt-28 pt-14 rounded-2xl">
+    <section id="skills" class="container max-w-lg px-8 mx-auto lg:px-16">
+      <div class="max-w-lg px-4 pb-4 bg-dirt-400 lg:pt-28 pt-14 rounded-2xl" aria-labelledby="skills-heading">
         <div class="animate-heading">
-          <h2 class="pl-4 text-3xl lg:pl-4 lg:text-5xl md:text-4xl text-primary">
+          <h2 id="skills-heading" class="pl-4 text-3xl lg:pl-4 lg:text-5xl md:text-4xl text-primary">
             Key Skills
           </h2>
           <p class="pt-4 pl-4 lg:w-1/2">
@@ -135,14 +140,14 @@
           </div>
 
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
 
     <!-- Projects -->
-    <div id="projects" class="container max-w-lg px-8 mx-auto lg:px-16 lg:mt-36 mt-28">
-      <section>
+    <section id="projects" class="container max-w-lg px-8 mx-auto lg:px-16 lg:mt-36 mt-28">
+      <div aria-labelledby="projects-heading">
         <div class="animate-heading">
-          <h2 class="text-3xl lg:text-5xl md:text-4xl text-primary">
+          <h2 id="projects-heading" class="text-3xl lg:text-5xl md:text-4xl text-primary">
             Project Highlights
           </h2>
           <p class="mt-4 text-xl lg:w-1/2">
@@ -155,10 +160,11 @@
 
             <!-- Image Section -->
             <div class="w-full lg:w-1/2">
-              <div class="lg:sticky lg:top-24">
-                <img class="rounded-2xl aspect-[16/9] lazy-load min-w-full" src="./assets/images/lazyload.jpg" alt="Texas Space Commission
-              screenshot" data-image="./assets/images/project-images/tsc.jpg" />
-              </div>
+              <figure class="lg:sticky lg:top-24">
+                <img class="rounded-2xl aspect-[16/9] lazy-load min-w-full" src="./assets/images/lazyload.jpg"
+                  data-image="./assets/images/project-images/tsc.jpg"
+                  alt="Homepage of the Texas Space Commission website" />
+              </figure>
             </div>
 
             <!-- Content Section -->
@@ -211,10 +217,11 @@
 
             <!-- Image Section -->
             <div class="w-full lg:w-1/2">
-              <div class="lg:sticky lg:top-24">
-                <img class="rounded-2xl aspect-[16/9] lazy-load min-w-full" src="./assets/images/lazyload.jpg" alt="Expedia Group
-              screenshot" data-image="./assets/images/project-images/expedia.jpg" />
-              </div>
+              <figure class="lg:sticky lg:top-24">
+                <img class="rounded-2xl aspect-[16/9] lazy-load min-w-full" src="./assets/images/lazyload.jpg"
+                  data-image="./assets/images/project-images/expedia.jpg"
+                  alt="Expedia Group partner platform interface" />
+              </figure>
             </div>
 
             <!-- Content Section -->
@@ -263,10 +270,11 @@
 
             <!-- Image Section -->
             <div class="w-full lg:w-1/2">
-              <div class="lg:sticky lg:top-24">
+              <figure class="lg:sticky lg:top-24">
                 <img class="rounded-2xl aspect-[16/9] lazy-load min-w-full" src="./assets/images/lazyload.jpg"
-                  data-image="./assets/images/project-images/nescafe-dolce-gusto.jpg" alt="Nescafe Coffee Pods" />
-              </div>
+                  data-image="./assets/images/project-images/nescafe-dolce-gusto.jpg"
+                  alt="Nescafé Dolce Gusto product marketing site" />
+              </figure>
             </div>
 
             <!-- Content Section -->
@@ -315,10 +323,10 @@
 
             <!-- Image Section -->
             <div class="w-full lg:w-1/2">
-              <div class="lg:sticky lg:top-24">
+              <figure class="lg:sticky lg:top-24">
                 <img class="rounded-2xl aspect-[16/9] lazy-load min-w-full" src="./assets/images/lazyload.jpg"
-                  data-image="./assets/images/project-images/macsales.jpg" alt="MacSales screenshot" />
-              </div>
+                  data-image="./assets/images/project-images/macsales.jpg" alt="MacSales.com e-commerce homepage" />
+              </figure>
             </div>
 
             <!-- Content Section -->
@@ -373,10 +381,11 @@
 
             <!-- Image Section -->
             <div class="w-full lg:w-1/2">
-              <div class="lg:sticky lg:top-24">
+              <figure class="lg:sticky lg:top-24">
                 <img class="rounded-2xl aspect-[16/9] lazy-load min-w-full" src="./assets/images/lazyload.jpg"
-                  data-image="./assets/images/project-images/esc13.jpg" alt="ESC 13 screenshot" />
-              </div>
+                  data-image="./assets/images/project-images/esc13.jpg"
+                  alt="Education Service Center Region 13 website" />
+              </figure>
             </div>
 
             <!-- Content Section -->
@@ -423,15 +432,15 @@
           </div>
 
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
 
     <!-- About -->
-    <div id="about" class="-mb-px bg-bottom bg-repeat-x bg-contain mt-36 bg-footer-trees">
-      <section class="container max-w-lg px-8 mx-auto lg:px-16 lg:mt-36 mt-28">
-        <div class="w-full lg:w-2/3 mx-auto">
+    <div class="-mb-px bg-bottom bg-repeat-x bg-contain mt-36 bg-footer-trees">
+      <section id="about" class="container max-w-lg px-8 mx-auto lg:px-16 lg:mt-36 mt-28">
+        <div class="w-full lg:w-2/3 mx-auto" aria-labelledby="about-heading">
 
-          <h2 class="text-3xl lg:text-5xl md:text-4xl text-primary">About Me</h2>
+          <h2 id="about-heading" class="text-3xl lg:text-5xl md:text-4xl text-primary">About Me</h2>
           <h3 class="text-2xl text-primary pt-4">The Bridge Between Code and Strategy</h3>
           <p class="mt-4">
 
@@ -487,30 +496,31 @@
           high-stakes project,
           my inbox is always open.</p>
 
-        <a class="flex mt-8 text-2xl group" href="mailto:johnhoysa@gmail.com?subject=Ready to work together!">
-          Send me an email
-          <img class="ml-2 fill-primary group-hover:animate-pulse" src="./assets/images/icons/arrow.svg" alt=""
-            width="24px" height="24px" aria-hidden="true" />
-        </a>
+        <address class="not-italic">
+          <a class="flex mt-8 text-2xl group" href="mailto:johnhoysa@gmail.com?subject=Ready to work together!">
+            Send me an email
+            <img class="ml-2 fill-primary group-hover:animate-pulse" src="./assets/images/icons/arrow.svg" alt=""
+              width="24px" height="24px" aria-hidden="true" />
+          </a>
+        </address>
       </section>
 
       <section class="flex flex-col col-span-6 mt-16 lg:col-span-3 lg:place-items-end lg:items-end lg:justify-end">
-        <img class="" src="./assets/images/site/john-hoysa-logo.svg" alt="Logo" width="152px" height="32px"
-          alt="John Hoysa" />
+        <img src="./assets/images/site/john-hoysa-logo.svg" alt="John Hoysa logo" width="152px" height="32px" />
         <ul id="navSocialFooter" class="flex items-center mt-6 mb-2 gap-3 md:hidden">
           <li class="rounded-full p-2 flex justify-center items-center w-8 h-8">
-            <a href="https://www.linkedin.com/in/johnhoysa">
-              <img src="./assets/images/icons/linkedin.svg" alt="LinkedIn" width="24px" height="24px" />
+            <a href="https://www.linkedin.com/in/johnhoysa" aria-label="LinkedIn profile">
+              <img src="./assets/images/icons/linkedin.svg" alt="" aria-hidden="true" width="24px" height="24px" />
             </a>
           </li>
           <li class="rounded-full p-2 flex justify-center items-center w-8 h-8">
-            <a href="https://github.com/johnhoysa/">
-              <img src="./assets/images/icons/github.svg" alt="GitHub" width="24px" height="24px" />
+            <a href="https://github.com/johnhoysa/" aria-label="GitHub profile">
+              <img src="./assets/images/icons/github.svg" alt="" aria-hidden="true" width="24px" height="24px" />
             </a>
           </li>
           <li class="rounded-full p-2 flex justify-center items-center w-8 h-8">
-            <a href="mailto:johnhoysa@gmail.com?subject=Correspondence From Site">
-              <img src="./assets/images/icons/email.svg" alt="Email" width="24px" height="24px" /></a>
+            <a href="mailto:johnhoysa@gmail.com?subject=Correspondence From Site" aria-label="Email John Hoysa">
+              <img src="./assets/images/icons/email.svg" alt="" aria-hidden="true" width="24px" height="24px" /></a>
           </li>
         </ul>
       </section>
